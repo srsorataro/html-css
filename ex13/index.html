@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagen dinâmica</h1>
+    <p>Tente abrir esse site  em vários dispositivos diferentes ou  simplismente  aumente  e duiminua  o tamanho  do seu  navegador.</p>
+    <picture>
+        <source media="(max-width: 750px )" srcset="foto/pequeno.png" type="image/png">
+        <source media="(max-width: 1050px )" srcset="foto/Medio.png" type="image/png">
+        <img src="foto/Grande.png" alt="imagem flexivel">
+        <h1>Reproduzindo Áudio</h1>
+        <p>Vamos aprender a reproduzir Áudio em HTML5.</p>
+        <audio  preload="metadata"  controls  > <!--autoplay controls  loop-->
+            <source src="midia/nefflex.mp3" type="audio/mpeg">
+            <source src="midia/nefflex.ogg" type="audio/ogg">
+            <source src="midia/nefflex.eav" type="audio/wav"> <!--Muito pesado para usar-->
+            <p>Seu navegador não consegue reproduzir audio. <a href="https://trovo.live/">click aqui para baixar audio em mp3.</a></p>
+            
+
+        </audio>
+        <!--MP3-wav-OGG-->
+    </picture>
+    
+    
+</body>
+</html>
