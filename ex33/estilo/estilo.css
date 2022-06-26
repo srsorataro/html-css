@@ -15,7 +15,7 @@
 }
 body{
     min-height: 100vh;
-    background-color: darkgray;
+    background-color: white;
  
 }
 header{
@@ -26,12 +26,17 @@ header{
 
 }
 header> h1{
+    font-size: 136px;
     padding-top: 50px;
+    padding-bottom: 50px;
     font-family: var(--font02);
     font-variant: small-caps;
+    font-weight: bold;
     
 }
 header > p{
+    position: relative;
+    top:-50px;
     text-align: center;
     color:white;
     font-family:var(--font01)
@@ -41,4 +46,32 @@ header >p > a{
     color:white;
     text-decoration: none;
     font-family: var(--font01);
+    font-weight: bold;
+}
+.normal >p{
+    font-family: var(--font03);
+    font-size: 46px;
+}
+.image>p{
+    font-family: var(--font03);
+    font-size: 47px;
+
+    
+    
+}
+footer{
+    background-color: black;
+    color:white;
+    text-align: center;
+    padding:15px;
+    
+    
+}
+footer>p{
+    font-family:var(--font01);
+    font-weight: bold;
+}
+footer> p >a{
+    color:white;
+    text-decoration: none;    
 }
