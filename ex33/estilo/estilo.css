@@ -78,14 +78,14 @@ section.image>p{
 }
 section#img01{
     background-attachment: fixed;
-    background-image: url(/ex33/imagem/background001.jpg);
+    background-image: url(../imagem/background001.jpg);
     background-position: right,center;
     background-size: cover;
 
 }
 section#img02{
     background-attachment: fixed;
-    background-image: url(/ex33/imagem/background002.jpg);
+    background-image: url(../imagem/background002.jpg);
     background-position: right,center;
     background-size: cover;  
 }
