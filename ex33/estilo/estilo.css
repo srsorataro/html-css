@@ -108,9 +108,9 @@ footer{
 }
 footer>p{
     
-    font-weight: bold;
 }
 footer> p >a{
+    font-weight: bold;
     color:white;
     text-decoration: none;    
 }
