@@ -12,13 +12,32 @@
         table{
             border-collapse: collapse;
         }
+        caption{
+            font-size: 1.3em;
+            font-weight: bolder;
+            padding:8px;
+        }
         td,th{
             border: 1px solid black;
+            padding:8px;
+        }
+        col.cnome{
+            background-color: rgb(205, 162, 247);
+        }
+        col.cgrup{
+            background-color: blanchedalmond;
         }
     </style>
 </head>
 <body>
     <table>
+        <colgroup>
+            <col class="cnome">
+            <col class="cgrup" span="2">
+            <col class="cnome">
+        
+            
+    </colgroup>
         <caption>Cadastro</caption>
         <tr>
             <th scope="col">Nome</th>
@@ -31,6 +50,36 @@
             <td>F</td>
             <td>25</td>
             <td>Jornalista</td>
+        </tr>
+        <tr>
+            <td>Cláudio</td>
+            <td>M</td>
+            <td>28</td>
+            <td>Progamador</td>
+        </tr>
+        <tr>
+            <td>Gustavo</td>
+            <td>M</td>
+            <td>42</td>
+            <td>Professor</td>
+        </tr>
+        <tr>
+            <td>Hélio</td>
+            <td>M</td>
+            <td>19</td>
+            <td>Vendedor</td>
+        </tr>
+        <tr>
+            <td>Maria</td>
+            <td>F</td>
+            <td>39</td>
+            <td>Médica</td>
+        </tr>
+        <tr>
+            <td>Otávio</td>
+            <td>M</td>
+            <td>22</td>
+            <td>Nutricionista</td>
         </tr>
     </table>
 
