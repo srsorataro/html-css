@@ -20,6 +20,9 @@ body{
     background-image: url('/ex36/imagem/frame-iphone.png');
     background-size:cover;
 }
+#redes{
+    text-align: right;
+}
 iframe{
     position: relative;
     background-color: brown;
@@ -29,7 +32,15 @@ iframe{
     width:267px;
     background: url('/ex36/imagem/tela-home.jpg');
     background-size: cover;
+    
 }
-a, img{
-    height: 50px;
+#redes a img{
+    width:50px;
+    margin: 10px;
+    border-radius: 50px;
+    box-shadow: 2px 2px 5px rgb(0 0 0 / 40%);
+    box-sizing: border-box;
 }
+
+
+    
