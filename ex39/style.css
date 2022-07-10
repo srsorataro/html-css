@@ -56,7 +56,7 @@ header{
         width:100%;
         top:70px;
         right:0px;
-        background: linear-gradient(90deg,#48ecb3, rgb(177, 177, 238), rgb(66, 59, 59));
+        background: linear-gradient(90deg,#48ecb2, rgb(177, 177, 238),rgb(66, 59, 59));
         height:0;
         transition: .6s;
         visibility: hidden;
