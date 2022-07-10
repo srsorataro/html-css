@@ -37,18 +37,19 @@ header{
     display: flex;
     list-style: none;
     gap:.5rem;
+    
 }
 #menu a {
     display: block;
     padding:.5rem
 }
 #btn-mobile{
-    display: none;
+    display: block;
 }
+
 @media(max-width:600px){
-    #btn-mobile{
-        display:block;
-    }
+    
+    
     #menu{
         display: block;
         position: absolute;
@@ -80,13 +81,39 @@ header{
         border:none;
         background: none;
         cursor:pointer;
+        
     
     }
-   span#hamburguer{
-       border-top:  50px solid blueviolet;
+   #hamburguer{
+       border-top:  2px solid;
        width: 20px;
     }
-    
+    #hamburguer::after, #hamburguer::before{
+        content:"";
+        display:block;
+        width:20px;
+        height:2px;
+        background:currentColor;
+        margin-top:5px;
+        transition: .3s;
+        position: relative;
+
+    }
+    #nav.active #hamburguer{
+        border-top-color:transparent
+
+    }
+    #nav.active #hamburguer::before{
+        transform: rotate(135deg);
+
+    }
+    #nav.active #hamburguer::after{
+        
+        transform:rotate(-135deg);
+        top:-7px;
+
+    }
+
         
     
   
