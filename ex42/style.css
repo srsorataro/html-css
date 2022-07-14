@@ -1,4 +1,4 @@
-*,*::before,*::after{
+*, *::before, *::after{
     box-sizing: border-box;
     font-family: Gotham Rounded,sans-serif;
     font-weight: normal;
@@ -15,13 +15,13 @@ body{
     align-content: center;
     min-height: 100vh;
     grid-template-columns: repeat( 4, 100px);
-    grid-template-rows: minmax(120px auto) repeat(5,100px);
+    grid-template-rows: minmax(120px, auto) repeat(5,100px);
 }
 .calculator-grid > button{  
-    height: 60px;
+    
     cursor:pointer;
     font-size: 2rem ;
-    border: 2px solid white;
+    border: 1px solid white;
     outline:none;
     background-color: rgba(255,255,255,.75);
 }
@@ -40,7 +40,7 @@ body{
     align-items: flex-end;
     justify-content: space-around;
     flex-direction: column;
-    padding: 18px;
+    padding: 10px;
     word-wrap: break-word;
     word-break: break-all;
 }
@@ -49,6 +49,6 @@ body{
     font-size: 1.5rem;
 }
 .output .current-operand{
-    color: rgba(255,255,255,.75);
+    color: white;
     font-size: 2.5rem;
 }
