@@ -1,16 +1,14 @@
-exibirAsteriscos(5)
-function exibirAsteriscos(linhas){
-   
-    for(let linha = 1; linha <= linhas; linha++){
-    let padrão = ''
-    for( let i = 0; i < linha; i++){
-        padrão += '*'
-       
-    }
-    console.log(padrão)
-    
-   
 
+function criarCelular(marcaCelular,tamanhoTela,capacidadeBateria){
+    return {
+        marcaCelular,
+        tamanhoTela,
+        capacidadeBateria,
+        ligar(){
+            console.log('Fazendo ligação.......')
+        }
     }
+    
 }
-  
+const celularl= criarCelular('Zenfone',5.5,5000)
+console.log(celularl)
