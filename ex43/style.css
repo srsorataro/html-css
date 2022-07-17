@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+*{
+    margin:0;
+    padding:0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+header{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+   padding: 40px 100px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   z-index: 1000;
+}
+header .logo{
+    position: relative;
+    color: #ff5e8e;
+    display: inline-block;
+    font-size:  2em;
+    text-decoration: none;
+    font-weight: 800;
+}
+header ul{
+    position: relative;
+    display: flex;
+}
+header ul li{
+    list-style: none;
+}
+header ul li a{
+    display:  inline-block;
+    color:#0169b2;
+    font-weight: 600;
+    font-size: 1.1em;
+    margin-left:  10px;
+    display: inline-block;
+    padding: 8px 18px;
+    text-decoration: none;
+    user-select: none;
+}
+    
+ header ul li a#active,
+ header ul li a:hover { 
+    background-color: #0169b2;
+    color: #fff;
+    border-radius: 30px;
+
+}
+#content{
+    position: relative;
+    display: flex;
+}
+#content #textBox{
+    position: relative;
+    max-width: 550px;
+
+}
+#content #textBox h2{
+    color:#0169b2;
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    line-height: 1.2em;
+    font-weight: 700;
+}
+#content #textBox p{
+    font-size: #333;
+}
