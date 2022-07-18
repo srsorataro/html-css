@@ -1,14 +1,17 @@
-
-function criarCelular(marcaCelular,tamanhoTela,capacidadeBateria){
-    return {
-        marcaCelular,
-        tamanhoTela,
-        capacidadeBateria,
-        ligar(){
-            console.log('Fazendo ligação.......')
-        }
+const celular ={
+    marcaCelular: 'ASUS',
+    tamanhoTela:{
+        vertical: 155,
+        horizontal: 75
+    },
+    ligar: function(){
+        console.log('Fazendo ligação..')
     }
-    
 }
-const celularl= criarCelular('Zenfone',5.5,5000)
-console.log(celularl)
+ const novoObjeto = Object.assign({
+    bateria:5000
+ }, celular)
+ console.log(novoObjeto)
+
+const obejeto2 = {...celular}
+console.log(obejeto2)
