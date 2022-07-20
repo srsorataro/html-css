@@ -1,8 +1,10 @@
-const numeros = [1,2,3,4,5,6,47,98]
+function botao(){
+    nome  = document.getElementById('d').value
+    convidou =['Daniel','Raffael',"Gabriel"]
+    if(convidou.includes(nome))
+    document.getElementById('e').innerHTML +='Você está convidado'
+    else
+    document.getAnimations('e').innerHTML += 'Não pode entrar'
+  
 
-const combinado  = numeros.join('💗')
-console.log(combinado);
-const frase  = "Olá bem vindo ao curso"
-const resultado = frase.split(' ')
-console.log(resultado)
-console.log(resultado.join('💢'))
+}
