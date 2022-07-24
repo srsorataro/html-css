@@ -9,7 +9,7 @@ if(theme === "dark"){
 btn.addEventListener("click", () =>{
     document.body.classList.toggle("dark")
 
-    if(theme === 'dark'){
+    if(theme ==='dark'){
         window.localStorage.setItem("theme", "light")
     }else{
         window.localStorage.setItem("theme", "dark")
