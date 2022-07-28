@@ -60,6 +60,7 @@ h2{
 h4,h5{
     font-size: 1.4rem;
     font: "poppins", sans-serif;
+    color:var(--color-dark);
 }
 h5{
     font-size:  0.9rem;
@@ -98,6 +99,8 @@ nav{
     place-items:center;
     position: fixed;
     z-index: 2;
+    background: white;
+    box-shadow:  0 1rem  1rem rgba(0,0,0,0.2);
 }
 nav button{
     display: none;    
@@ -217,4 +220,82 @@ section#commercial  .container {
 section#commercial .container  iframe{
     width:  100%;    
 }
+section#products .container{
+    width:56%;
+}
+section#products .container > h2,
+section#products .container > p{
+    text-align: center;
+
+
+}
+section#products article{
+    display: grid;
+    grid-template-columns:  1fr 1fr;
+    align-items:  center;
+    margin-top:  5rem;
+}
+section#products article{
+    margin: 1.5rem 0 1rem;
+}
+section#products article:last-child{
+    grid-template-columns:  60% 40%;
+}
+section#products article:last-child .image{
+    margin-right: -8rem;
+}
+section#products  a:hover{
+    text-decoration: underline;
+
+}
+section#why-choose-us .container .head{
+    display: flex;
+    justify-content: space-between;
+
+
+}
+section#why-choose-us .container .head .left h4{
+    font-style: italic;
+
+}
+section#why-choose-us .container .head .right{
+    display: flex;
+    gap: 2rem;
+    width: 16rem;
+}
+section#why-choose-us .container .head .right .image{
+    width: 8rem;
+}
+section#why-choose-us .container .head .right h4{
+    margin-top:  1rem;
+    color:var(--color-black);
+    font-weight: 700;
+}
+section#why-choose-us .container article{
+    display: grid;
+    grid-template-columns:  1fr 1fr;
+    align-items: center;
+    gap: 3rem;
+    margin-top:  6rem;
+}
+section#why-choose-us .container article h4{
+    margin-bottom:  1,4rem;
+    color:var(--color-black);
+    font-weight: 700;
+}
+section#why-choose-us .container article p{
+    margin-bottom: 1rem;
+}
+section#why-choose-us .container article a{
+    display: inline-block;
+    margin-top: 1rem;
+}
+section#why-choose-us .container article a img{
+    filter:  saturate(0);
+    transform: all 300ms ease;
+}
+
+
+
+
 
