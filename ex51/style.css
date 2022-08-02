@@ -5,6 +5,8 @@
     padding:0;
     box-sizing: border-box;
 }
+
+
 h4{
     font-size: 1.3rem;
     color:rgb(2, 182, 232);
@@ -13,8 +15,9 @@ h4{
 .nav-center{
     background: white;
     display: flex;
+    margin: auto;
     align-items: center;
-    justify-content: space-around
+    justify-content: space-around;
     
     
 }
@@ -37,24 +40,52 @@ nav ul   {
 }
 
 
-.container{
-    color:white;
-    background: black;
-    height:40px;
-    width: 23vw;
-    position: relative;
-    top:50vh;
-    left: 40vw;
-    border-radius: 10px;
-    padding-top: 5px;
-    text-align: center;
+ main  {
+    border: 1px solid rgb(169, 11, 11);
+    display: flex;
+    width: 98vw;
+    height: 98vh;
+  
+    
 
     
 
 }
+body > main {
+    display: block;
+    margin: auto;
+}
+ main .container{
+    display: block;
+    margin: auto;
+    top: 50%;
+    color:rgb(0, 0, 0);
+    background: #f1f5f8 ;
+    height:40px;
+    width: 30vw;
+    position: relative;
+    border-radius: 10px;
+    padding-top: 5px;
+    text-align: center;
+    
+}
+.container h2{
+    position: absolute;
+    
+}
+   .color{
+    color: blue;
+    padding-left: 12px;
+    font-size: 1.5rem;
+    position: absolute;
+    margin: auto;
+    width: 50%; 
+    
+}
+
 .btn{
     position: relative;
-    top: 5vh;
+    top: 8vh;
     height:5vh;
     width: 10vw;
     border-radius: 10px;
