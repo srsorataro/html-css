@@ -67,19 +67,31 @@ body > main {
     border-radius: 10px;
     padding-top: 5px;
     text-align: center;
+   
     
 }
 .container h2{
-    position: absolute;
+    position: relative;
+    display: inline-block;
+    right: 10px;
+
+    
     
 }
-   .color{
-    color: blue;
+    span  .color{
+   left: 15px;
     padding-left: 12px;
     font-size: 1.5rem;
-    position: absolute;
+    position: relative;
     margin: auto;
     width: 50%; 
+  
+    text-align: center;
+    margin: auto;
+    left:50px;
+    display: block;
+    padding-top: 5px;
+    
     
 }
 
@@ -87,7 +99,7 @@ body > main {
     position: relative;
     top: 8vh;
     height:5vh;
-    width: 10vw;
+    width: 50%;
     border-radius: 10px;
    background: rgba(255, 255, 255, 0);
    font-size: 1rem;
@@ -100,12 +112,23 @@ body > main {
        
       
     }
-    .container{
-        width:50vw; 
+     main .container{
+        padding: 10px;
+        width:70vw; 
         height: 10vh;
+        margin-bottom: 20px;
+        
     }
     .btn{
-        width:20vw; 
+        text-align: center;
+        align-items: center; 
+        width:50vw; 
         height: 5vh;
+}
+.color{
+    bottom: 1.8rem;
+    left: 8.5rem;
+
+
 }
 }
