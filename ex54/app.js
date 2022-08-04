@@ -9,10 +9,10 @@ const  reviews =[
     },
     {
         id: 2,
-        name: "chupa cu ",
-        job: "cu preto",
+        name: "Comedor de verduras ",
+        job: "Degustador",
         img: "./person2.png",
-        text: "Sou um chupar cu com muito orgulho. ",
+        text: "Como verduras de manhão de tarde e de noite. ",
     },
     {
         id: 3,
@@ -28,9 +28,9 @@ const author = document.getElementById('author')
 const job  = document.getElementById('job')
 const info = document.getElementById('info')
 
-const prevBtn = document.querySelector('prev-btn')
-const nextBtn = document.querySelector('next-btn')
-const randomBtn = document.querySelector('random-btn')
+const prevBtn = document.querySelector('.prev-btn')
+const nextBtn = document.querySelector('.next-btn')
+const randomBtn = document.querySelector('.random-btn')
 
 //definir item inicial
 
@@ -51,4 +51,31 @@ function showPerson(person){
 
 
 }
+//mostrar a proximaa pessoa
+
+nextBtn.addEventListener('click', function(){
+    currentItem++
+    if(currentItem > reviews.length -1){
+        currentItem= 0 
+    }
+    showPerson(currentItem)
+   
+
+})
+//mostrar a pessoa anterior
+prevBtn.addEventListener('click', function(){
+    currentItem--
+    if(currentItem < 0 ){
+        currentItem = reviews.length -1
+    
+    }
+    showPerson(currentItem)
+  
+
+})
+//mostrar pessoa randomicamente
+randomBtn.addEventListener('click',function(){
+    currentItem = Math.floor(Math.random() * reviews.length)
+    showPerson(currentItem)
+})
 

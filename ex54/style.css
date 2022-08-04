@@ -37,14 +37,14 @@ p{
 h3{
     position: relative;
     text-align: center;
-    top:3em;
+    top:3.2em;
     color:var(--color1);
     text-decoration:  #296ac4 underline 3px;
     text-transform: uppercase  ;
 }
 
 .review{
-    background: white;
+    background: linear-gradient(360deg, rgb(254, 255, 243),rgb(231, 230, 177),rgb(143, 116, 4));
     width:350px;
     height:350px;
     border: 1px solid black;
@@ -59,7 +59,7 @@ h3{
 #info{
     text-align: center;
     margin-top: 8px;
-    color:black;
+    color:rgb(44, 44, 44);
     font-family: Arial, Helvetica, sans-serif;
     
  }
@@ -90,13 +90,19 @@ h3{
 
 
  .arrow{
+    
     border:solid #5bfadf;
     border-width:  0 3.5px 3.5px 0;
     padding: 5px;
     display: inline-block;
+    margin:5px;
+    
+    
 }
+
+  
 .left{
-   transform: rotate(135deg); 
+    transform: rotate(135deg); 
    -webkit-transform: rotate(135deg);
 }
  .right{
@@ -107,8 +113,26 @@ button{
     background-color: rgba(240, 248, 255, 0);
     border: none;
     position: relative;
-    left: 10rem;
-    top: 1.5rem;
+    left: 9.5rem;
+    top: 6rem;
+}
+.prev-btn:hover{
+    transition: .23s;
+    top: 5.7rem;
+    border: 1px solid black;
+    background: linear-gradient(45deg,rgb(58, 81, 72),#defffa, rgb(174, 255, 243),rgb(59, 56, 56));
+    padding: .04px ;
+    border-radius: 5.8px;
+    
+}
+.next-btn:hover{
+    transition: .23s;
+    top: 5.7rem;
+    border: 1px solid black;
+    background: linear-gradient(-45deg,rgb(58, 81, 72),#defffa, rgb(174, 255, 243),rgb(59, 56, 56));
+    padding: .04px;
+    border-radius: 5.8px;
+    
 }
 .random-btn{
     font-size:12px ;
@@ -117,6 +141,16 @@ button{
     padding: 8px;
     border-radius: 15px;
     position: relative;
-    top:3.5rem;
-    left: 5.6rem;
+    top:7.8rem;
+    left: 4.7rem;
+}
+.random-btn:active{
+    font-size: 10px;
+    padding-left: 13px;
+}
+.random-btn:hover{
+    background: linear-gradient(45deg, rgb(225, 120, 0),rgb(205, 188, 0),yellow);
+
+    
+
 }
