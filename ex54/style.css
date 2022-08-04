@@ -15,18 +15,57 @@
  html,body{
     height: 100%;
     width:100%;
+    background: #f0f1f3;
     
+}
+h2{
+    position: relative;
+    text-align: center;
+    top:3.2em;
+    
+}
+p{
+    position: relative;
+    text-align: center;
+    top:1em;
+    font-family: var(--robot);
+    color:rgb(0, 53, 144);
+    
+
+}
+
+h3{
+    position: relative;
+    text-align: center;
+    top:3em;
+    color:var(--color1);
+    text-decoration:  #296ac4 underline 3px;
+    text-transform: uppercase  ;
 }
 
 .review{
-    width:400px;
-    height:300px;
+    background: white;
+    width:350px;
+    height:350px;
     border: 1px solid black;
     position: relative;
     margin:auto;
-    top:60%;
-    box-shadow:  2px 2px 3px rgba(0, 0, 0, 0.323);
+    display: block;
+    top: 5rem;
+    box-shadow:  3px 3px 8px  rgba(0, 0, 0, 0.205);
+    border:none;
+
 }
+#info{
+    text-align: center;
+    margin-top: 8px;
+    color:black;
+    font-family: Arial, Helvetica, sans-serif;
+    
+ }
+
+
+
  .review .img-container{
    
     display: flex;
@@ -35,10 +74,49 @@
     justify-content: center;
  }
   .img-container img{
-    width: 70%;
-    height: 40%;
+    width: 50%;
+    height: 20%;
     position: relative;
-    top:40px;
+    top:10px;
     
     
  }
+ h4{
+    position: relative;
+    text-align: center;
+    top:.5em;
+    font-size: 1.2em;
+ }
+
+
+ .arrow{
+    border:solid #5bfadf;
+    border-width:  0 3.5px 3.5px 0;
+    padding: 5px;
+    display: inline-block;
+}
+.left{
+   transform: rotate(135deg); 
+   -webkit-transform: rotate(135deg);
+}
+.right{
+    transform: rotate(-135deg); 
+    -webkit-transform: rotate(-51deg);
+ }
+button{
+    background-color: rgba(240, 248, 255, 0);
+    border: none;
+    position: relative;
+    left: 10rem;
+    top: 2rem;
+}
+.random-btn{
+    font-size:12px ;
+    background: #5bfadf00;
+    border: 2px solid cyan;
+    padding: 8px;
+    border-radius: 15px;
+    position: relative;
+    top:3.8rem;
+    left: 5.8rem;
+}
