@@ -99,7 +99,7 @@ h3{
    transform: rotate(135deg); 
    -webkit-transform: rotate(135deg);
 }
-.right{
+ .right{
     transform: rotate(-135deg); 
     -webkit-transform: rotate(-51deg);
  }
@@ -108,7 +108,7 @@ button{
     border: none;
     position: relative;
     left: 10rem;
-    top: 2rem;
+    top: 1.5rem;
 }
 .random-btn{
     font-size:12px ;
@@ -117,6 +117,6 @@ button{
     padding: 8px;
     border-radius: 15px;
     position: relative;
-    top:3.8rem;
-    left: 5.8rem;
+    top:3.5rem;
+    left: 5.6rem;
 }
