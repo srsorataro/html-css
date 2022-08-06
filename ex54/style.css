@@ -150,6 +150,7 @@ button{
 }
 .random-btn:hover{
     background: linear-gradient(45deg, rgb(225, 120, 0),rgb(205, 188, 0),yellow);
+    cursor: pointer;
 
     
 
