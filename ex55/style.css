@@ -85,23 +85,24 @@ nav ul li a:hover::before{
     .hamburger{
         display: block;
     }
-    .hamburger:active .bar:nth-child(2){
-        opacity: 0;
+    .hamburger  .bar:nth-child(2){
+        top: 0;
         
     }
-    .hamburger:active .bar:nth-child(1){
-        transform: translateY(8px) rotate(45deg);
+    .hamburger .bar:nth-child(1){
+        top:8px;
     }
-    .hamburger:active .bar:nth-child(3){
-        transform: translateY(-8px) rotate(-45deg);
+    .hamburger .bar:nth-child(3){
+        top:16px;
     }
+
     
     .links{
         position: fixed;
         top: -100%;
         gap: 0;
         flex-direction: column;
-        background-color:white;
+        background-color:rgb(37, 38, 39);
         width:100%;
         text-align: center;
         transition:  .3s;
@@ -114,15 +115,26 @@ nav ul li a:hover::before{
         position: relative;
         margin: auto;
         justify-content: center;
+        cursor: pointer;
+        
+
+       
        
     }
+    nav ul li a{
+        color: white;
+    }
+  
+
     .nav-item{
-       margin: 16px 0;
+       margin: 7px 0;
        margin-right: 15px;
 
+
        
 
     }
+ 
     .links.active{
         top: 0;
         
