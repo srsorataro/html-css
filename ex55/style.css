@@ -28,7 +28,7 @@ nav  img{
   
 }
 nav ul{
-    float: right;
+    text-align: center;
     margin-right: 25px;
 }
 
@@ -76,69 +76,118 @@ nav ul li a:hover::before{
     width: 25px;
     height: 3px;
     margin: 5px auto;
-    -webkit-transform: all 0.3s ease-in-out;
+    
     transition:  all 0.3s ease-in-out;
     background: black;
  
 }
+.social-icons{
+    display: flex;
+    position: relative;
+    float:right;
+    top:-15px;
+    transform: none;
+}
+    .icon{
+    display: flex;
+    width: 30px;
+    height: 30px;
+    position: relative;
+  
+    
+    transform-origin: none;
+   
+    justify-content: space-between;
+    align-items: center;
+    display: inline-block;
+    line-height:  80px;
+    margin: 0 15px;
+    background-color: aqua;
+    border-radius: 50%;
+    transition: 5s ease;
+
+    
+}
+.social-icons .fab .icon:hover{
+    display: flex;
+    position: relative;
+    top:-10px;
+}
+   
+
 @media(max-width: 768px){
     .hamburger{
         display: block;
     }
-    .hamburger  .bar:nth-child(2){
-        top: 0;
-        
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
     }
-    .hamburger .bar:nth-child(1){
-        top:8px;
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
     }
-    .hamburger .bar:nth-child(3){
-        top:16px;
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
     }
-
     
-    .links{
+
+
+
+    .links {
         position: fixed;
         top: -100%;
         gap: 0;
         flex-direction: column;
-        background-color:rgb(37, 38, 39);
+        background-color:rgb(255, 255, 255);
         width:100%;
         text-align: center;
         transition:  .3s;
        
+       
     }
+
     nav ul{
-        height: 98vh;
-        width: 300px;
+        height:40vh;
         display: flex;
         position: relative;
         margin: auto;
         justify-content: center;
         cursor: pointer;
+        line-height: 2px;
         
 
        
        
     }
-    nav ul li a{
-        color: white;
-    }
-  
-
-    .nav-item{
-       margin: 7px 0;
-       margin-right: 15px;
-
-
+    
+    
        
-
+    
+    nav ul li{
+        position: relative;
+    
+        line-height: 2.5rem;
+        top: 140px;
     }
+    nav ul li a{
+        position: relative;
+        color: rgb(7, 7, 7);
+        right: 35%;
+        top: -15vh; 
+        
+    }
+   
+   
+
+ 
+ 
  
     .links.active{
         top: 0;
+    
         
     }
-    
+    .social-icons{
+        display:none ;
+    }
 }
 
