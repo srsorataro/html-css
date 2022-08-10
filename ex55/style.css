@@ -45,3 +45,30 @@ ul li a:hover{
   color:brown;
  
 }
+ #btn-menu {
+  
+  display: none;
+  
+ 
+}
+@media(max-width:750px){
+  #op{
+    display: none;
+  }
+  #btn-menu{
+    display: block;
+   
+    
+    
+  }
+   nav #btn-menu{
+    position: relative;
+    margin: auto;
+    left: 25rem;
+    top: 1rem;
+  }
+  #btn-menu.active{
+    color:red;
+  }
+
+}
