@@ -11,151 +11,37 @@
     text-decoration: none;
     list-style-type: none;
   }
-body{
-  background: linear-gradient( 195deg, rgb(59, 0, 136),rgb(28, 1, 75), rgb(57, 2, 116), rgb(70, 2, 119), rgb(32, 15, 40));
-  min-height: 200vh;
-
+html,body{
+  width:100%;
+  height:100%;
+  left:0;
+  font-family: 'Open Sans',  serif;
+  background-color: rgba(238, 242, 255, 0.4);
+}
+#logo{
+  font-size: 1.3rem;
+  color: white;
 }
 header{
-  position: fixed;
-  top:0;
-  left:0;
+  height: 70px;
+  padding: 1rem;
   display: flex;
+  position: fixed;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
-  transition: .6s;
-  padding:40px 100px;
-  background: rgba(0, 0, 0, 0.332);
-  width:100%;
+  background: rgb(32, 32, 37);
+  
 }
-header .logo{
-  position: relative;
-  font-weight:  700;
-  color:#fff;
-  font-size: 2em;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  transition:  .6s;
-
-}
-header ul {
-  position: relative;
+ ul{
   display: flex;
-  justify-content: center;
-  align-items: center;
-
+  gap: 2rem;
+  
 }
-header ul li{
-  position: relative;
-
+ul li a{
+  color:white;
 }
-
-header ul li a{
-  position: relative;
-  margin: 0 35px;
-  color:rgb(255, 254, 254);
-  letter-spacing: 2px;
-  font-weight: 500px;
-  transition: .6s;
-}
- header ul li {
+ul li a:hover{
+  color:brown;
  
-  position: relative;
-  left: 12rem;
-}
-header ul li a:hover{
-  color: rgb(133, 0, 0);
-}
-header.sticky{
-  padding: 5px 100px;
-  background: #fff;
-}
-header.sticky .logo,
-header.sticky ul li a{
-  color:black;
-
-}
-#btn-mobile{
-  position: absolute;
-  display: none;
-  left: 25rem;
-  color: white;
-  
-}
-@media(max-width:750px){
-
-
-   #menu{ 
-    display: block;
-    position: absolute;
-    width:100%;
-    top:70px;
-    right: 0;
-    height: 98vh;
-    line-height: 50px;
-    background: rgb(1, 0, 0);
-    font-size: 1.5em;
-   visibility: hidden;
-   overflow-y: hidden;
-    z-index:1000;
-    
-   
-  }
-  .logo{
-    display: none;
-  }
-
-  #nav.active #menu{
-    height:  calc(100vh -70px);
-   overflow-y: auto;
-    visibility:visible;
-    
-  }
-  
-  #menu a{
-    padding: .5rem 0;
-    margin:0 .5rem;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
-  }
-  #btn-mobile{
-   display: flex;
-   padding: .5rem 1rem;
-   font-size:  1rem;
-   border:none;
-   background: none;
-   cursor: pointer;
-   gap:.5rem;
-  }
-
-  #hamburgue{
-
-    width:20px;
-    border-top: 2px solid;
-  }
-  #hamburgue::after,#hamburgue::before{
-    content: '';
-    display: block;
-    width:20px;
-    height: 2px;
-    border-top: 2px solid;
-    background: currentColor;
-    margin-top: 5px;
-    transition: .3s;
-    position: relative;
-  }
-  #hamburgue.active{
-    border-top-color: transparent;
-  }
-  #hamburgue.active::before{
-    transform: rotate(135deg);
-
-  }
-   #hamburgue.active::after{
-    transform: rotate(-135deg);
-    top: -7px;
-
-
-
-}
-
 }
