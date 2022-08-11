@@ -8,25 +8,22 @@
    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <header id="header">
-    <a href=""id="logo">Logo</a>
-    <nav id="nav">
-      <button id="btn-mobile">
-        Menu <span id="hambugue"></span></button>
-      <ul id="menu">
-        <li><a href="#" class="Home">Home</a></li>
-        <li><a href="#" class="Home">Contact</a></li>
-        <li><a href="#" class="Home">About</a></li>
-        <li><a href="#" class="Home">Rapaz</a></li>
-        <li><a href="#" class="Home">Uepa</a></li>
-        <li><a href="#" class="Home">Que isso</a></li>
-      </ul>
-    </nav>
-   
-   
-   </header>
+  <header id="menu-bar">
+    <menu id="menu" onclick="onClickMenu()">
+      <span id="bar1" class="bar"></span>
+      <span id="bar2" class="bar"></span>
+      <span id="bar3" class="bar"></span>
 
-
+    </menu>
+    <ul class="nav" id="nav">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Sobre</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Galeria</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </header>
+  <div class="menu-bg" id="menu-bg"></div>
     <script src="app.js"></script>
 </body>
 </html>
