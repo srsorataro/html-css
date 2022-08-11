@@ -1,6 +1,6 @@
-const btnMobile = document.querySelector('btn-menu')
+const btnMobile = document.getElementById('btn-mobile')
 function toggleMenu(){
-    const nav = document.querySelector('nav1')
+    const nav = document.getElementById('nav')
     nav.classList.toggle('active')
 }
 btnMobile.addEventListener('click',toggleMenu)

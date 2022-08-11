@@ -20,7 +20,7 @@ html,body{
 }
 #logo{
   font-size: 1.3rem;
-  color: white;
+  color: rgb(30, 28, 28);
 }
 header{
   height: 70px;
@@ -30,45 +30,54 @@ header{
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  background: rgb(32, 32, 37);
+  background: rgb(168, 168, 190);
   
 }
- ul{
+#menu {
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
   
 }
-ul li a{
-  color:white;
+#menu  li a{
+  color:rgb(16, 12, 12);
 }
-ul li a:hover{
+#menu li a:hover{
   color:brown;
  
 }
- #btn-menu {
-  
+
+#btn-mobile{
   display: none;
-  
- 
 }
 @media(max-width:750px){
-  #op{
-    display: none;
-  }
-  #btn-menu{
+
+  #btn-mobile{
     display: block;
    
     
     
   }
-   nav #btn-menu{
-    position: relative;
-    margin: auto;
-    left: 25rem;
-    top: 1rem;
+  #nav.active #menu{
+    display: block;
+   
   }
-  #btn-menu.active{
-    color:red;
+  #menu{
+    display: none;
+    position: absolute;
+    width:100%;
+    top:70px;
+    right:0px;
+    background: rgb(168, 168, 190) ;
+    height: calc(100vh - 70px);
+    z-index: 1000;
+    
+  }
+#menu .Home{
+    font-size: 2rem;
+    padding: 0 1rem ;
+    margin:   1 0rem;
+    border-bottom:  2px  solid rgb(87, 85, 85);
+
   }
 
 }
