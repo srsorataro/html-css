@@ -58,26 +58,60 @@ header{
     
   }
   #nav.active #menu{
-    display: block;
+    height: calc(100vh - 70px);
+    visibility: visible;
+    overflow-y: auto;
    
   }
   #menu{
-    display: none;
+    display: block;
     position: absolute;
     width:100%;
     top:70px;
     right:0px;
     background: rgb(168, 168, 190) ;
-    height: calc(100vh - 70px);
+    height: 0px;
+    transition: .6s;
     z-index: 1000;
+    visibility: hidden;
+    overflow-y: hidden;
+    
+    
     
   }
 #menu .Home{
     font-size: 2rem;
-    padding: 0 1rem ;
-    margin:   1 0rem;
+    padding: 0 2rem ;
+    margin:  0 30vw;
     border-bottom:  2px  solid rgb(87, 85, 85);
 
   }
+  .Home{
+    position: relative;
+    line-height: 3.5rem;
+  }
+  #btn-mobile{
+    display: flex;
+    padding: .5rem 1rem;
+    font-size:  1rem;
+    border:  none;
+    background: none;
+    cursor: pointer;
+    gap:.5rem;
+  }
+#hambugue{
+  width: 20px;
+  border-top: 2px solid;
+}
+#hambugue::after, #hambugue::before{
+  content: '';
+  display: block;
+  width:20px;
+  height: 2px;
+  background: black;
+  margin-top: 5px;
+  
+
+}
 
 }
