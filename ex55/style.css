@@ -86,9 +86,11 @@ html,body{
 }
 .change #menu-bg{
   border:  2px solid black;
-  width: 300px;
-  height: 200px;
+  width: 500px;
+  height: 400px;
   right: 12rem;
+  top: -200rem;
+  left:-50px;
   transform: translate(-60% -30%);
   display: block ;
 }
