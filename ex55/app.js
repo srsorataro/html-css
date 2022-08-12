@@ -1,9 +1,11 @@
-const menu = document.getElementById('menu')
-const nav = document.getElementById('nav')
-const bg = document.getElementById('menu-bg')
+var logo = document.querySelector('.container')
+var menu = document.querySelector('.menu')
+var menul = document.querySelector('.menulogo')
 
-menu.addEventListener('click', () =>{
-    menu.classList.toggle('change')
-    nav.classList.toggle('change')
-    bg.classList.toggle('change')
+
+logo.addEventListener('click',() =>{
+    menu.classList.toggle('showmenu')
+    menul.classList.toggle('showmenu')
+     logo.classList.toggle('showmenu')
+
 })
