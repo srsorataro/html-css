@@ -1,11 +1,7 @@
-var logo = document.querySelector('.container')
-var menu = document.querySelector('.menu')
-var menul = document.querySelector('.menulogo')
-
-
-logo.addEventListener('click',() =>{
-    menu.classList.toggle('showmenu')
-    menul.classList.toggle('showmenu')
-     logo.classList.toggle('showmenu')
-
+const hamb  =document.querySelector('.hamburgue')
+const Menu1  =document.querySelector('.menu')
+hamb.addEventListener('click', () =>{
+    hamb.classList.toggle('active')
+    Menu1.classList.toggle('active')
 })
+

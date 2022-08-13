@@ -15,9 +15,123 @@ html,body{
   width:100%;
   height:100%;
   font-family: 'Open Sans',  serif;
+  background: radial-gradient(rgb(255, 255, 255),rgb(212, 211, 211));
   
 }
+header{
+  width:100%;
+  position: fixed;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.511);
+  background: radial-gradient(rgb(34, 31, 57), rgb(46, 56, 65));
+}
+main{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  justify-items: center;
+  height:80px;
+ 
 
+}
+
+ul{
+  display: flex;
+}
+ul li{
+ display: flex;
+ margin:  15px;
+}
+ul li a{
+  color:white;
+}
+
+ul li a:hover{
+  font-weight: bold;
+  text-shadow: 1px 1px 15px white;
+}
+#home{
+  font-weight: bold;
+}
+.logo{
+  position: relative;
+  color:white;
+  font-size: 18px;
+  left:15px;
+  z-index: 1;
+}
+.logo:hover{
+  position: relative;
+  top:-1.2px;
+  font-size: 19px;
+  font-weight: bolder;
+  text-shadow: 1px 1px 15px white;
+
+}
+.hamburgue{
+  display: none;
+}
+.bar{
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+  right:20px;
+}
+@media(max-width:600px){
+  .menu{
+    display: none;
+  
+  }
+  .hamburgue{
+    display: block;
+    cursor: pointer;
+  }
+
+   
+   .menu.active{
+    position: relative;
+  
+    display: block;
+    background: radial-gradient(rgb(34, 31, 57), rgb(46, 56, 65));
+    width:100vw;
+    padding: 10px;
+    top:150px;
+    border-radius: 0 0 0 50px;
+    left:50px;
+  
+    
+  }
+  .hamburgue.active .bar:nth-child(1){
+    transform: translateY(14px) rotate(135deg);
+    
+
+  }
+  .hamburgue.active .bar:nth-child(2){
+    opacity: 0;
+    
+  }
+ 
+  .hamburgue.active .bar:nth-child(3){
+    transform: translateY(-2px) rotate(-135deg);
+    
+  }
+ 
+ 
+  ul li a{
+    position: relative;
+    margin:auto;
+
+    
+  }
+
+ 
+
+
+
+}
 
 
 
