@@ -18,6 +18,128 @@ html,body{
   background: radial-gradient(rgb(255, 255, 255),rgb(212, 211, 211));
   
 }
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width:100%;
+  height:80px;
+  background:linear-gradient(to bottom,rgb(255, 223, 248),rgb(185, 253, 247),lightblue);
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.299);
+}
+
+nav{
+  display: flex;
+}
+ul{
+  display: flex;
+}
+ul li{
+  margin: 0 10px;
+}
+.logo{
+  position: relative;
+  font-size: 18px;
+  left: 15px;
+  font-weight: bold;
+}
+.me1{
+  font-weight: bold;
+  color:rgb(127, 144, 250);
+
+}
+ul li a:hover{
+  color:rgb(111, 130, 255);
+  text-shadow: 2px 2px 8px rgb(6, 111, 149);
+}
+.logo:hover{
+  position: relative;
+  color:rgb(111, 130, 255);
+  font-size: 19px;
+  text-shadow: 2px 2px 8px rgb(6, 111, 149);
+  
+
+}
+.btn-menu{
+  
+  display: none ;
+  position: relative;
+  right: 15px;
+  border: none;
+  background: none;
+  cursor: pointer;
+ 
+}
+.hamb{
+  display: block;
+  border-top:2px solid;
+  width:30px;
+}
+.hamb::after,.hamb::before{
+  content: '';
+  display: block;
+  border-top:2px solid;
+  width:30px;
+  height: 2px;
+  margin-top: 6px;
+}
+@media(max-width:700px){
+  .menu{
+    display: none;
+  }
+ 
+  .btn-menu{
+    position: fixed;
+    display: flex;
+    top:30px;
+  }
+  .menu.active{
+    position: relative;
+    display: block;
+    margin-top: 35rem;
+    
+   
+
+  }
+ 
+  .btn-menu.active .hamb::after{
+    
+
+  }
+  .btn-menu.active .hamb::before{
+
+    
+    
+  }
+  
+  
+  .logo.active{
+    display: none;
+  }
+ 
+  li{
+   
+    padding-top: 5rem;
+    margin: auto;
+  }
+  li a{
+    position: relative;
+    margin: auto;
+    left: 18rem;
+  }
+  .hed.active{
+    display: flex;
+    height: 200px;
+    width:100%;
+    padding-bottom: 600px;
+    background:linear-gradient(to bottom,rgb(255, 223, 248),rgb(185, 253, 247),lightblue);
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.299);
+  }
+  
+ 
+
+}
+
 
 
 
