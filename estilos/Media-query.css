@@ -1,2 +1,21 @@
 @charset "UTF-8";
 /*Todas as demais midias*/
+
+    img#fone{
+        display: block;
+    }
+    img#tablete{
+        display: block;
+    
+    }
+    img#print{
+        display: block;
+    }
+    img#pc{
+        display: block;
+    }
+    img#tv{
+        display: block;
+    }
+
+
