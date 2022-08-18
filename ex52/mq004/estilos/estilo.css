@@ -34,7 +34,7 @@ main{
     padding:10px;
 }
 img#fone{
-    display: none;
+    display: block;
 }
 img#tablete{
     display: none;
