@@ -46,8 +46,25 @@ html,body{
   border: 1px solid rgb(101, 196, 251);
   color:rgb(66, 158, 186);
   border-radius: 5px;
+ 
+
+}
+.menu{
+  display: block;
+  border-top: 2px solid;
+  width:20px;
+  position: relative;
+  left: 1.599px;
   
 
+}
+.menu::before,.menu::after{
+  content: '';
+  display: block;
+  width:20px;
+  height:2px;
+  margin-top: 6px;
+  background: rgb(66, 158, 186);
 }
 
 .nav-toggle:hover{
@@ -101,12 +118,41 @@ html,body{
     
 
    
+    
   }
+  .nav-toggle.active{
+    transition: 1s;
+    transform: none;
+    border: none;
+    background: transparent;
+  }
+
+
   .nav-toggle.active{
     position: relative;
     bottom:20vh;
 
   }
+  .nav-toggle.active .menu{
+    position: relative;
+    top:-22vh;
+    border-top-color: transparent;
+    transition: .5s;
+    
+  }
+  .nav-toggle.active .menu::after{
+    transform: translateY(-8px) rotate(-135deg);
+    background: darkred;
+    box-shadow: 1px 1px  5px rgba(0, 0, 0, 0.456);
+    
+  }
+ 
+  .nav-toggle.active .menu::before{
+    transform:  translateY(8px) translateY(-8px) rotate(135deg);
+    box-shadow: 1px 1px  5px rgba(0, 0, 0, 0.432);
+    background: darkred;
+  }
+ 
 
   .logo{
     position: relative;
@@ -116,7 +162,7 @@ html,body{
   .links.active {
     position: absolute;
     display: block;
-    height: 80px;
+    height: 50vh;
     font-size: 1.3rem;
     line-height: 2.5rem;
     left: 2vw;
@@ -129,19 +175,26 @@ html,body{
     position: relative;
     top: -40px;
     background: rgba(140, 212, 212, 0.212);
-
     text-align: center;
-    padding: 2px 100vw 5px 0;
+    padding: 2px 80vw 5px 0;
     padding-left: 15px;
-    margin-bottom:  .7rem;;
+    margin-bottom:  .7rem;
 
     border-radius: 5px;
+  }
+  .links li a:hover{
+   font-size: 23px;
+   left:20px;
+   padding: 4px 83vw 8px 0;
+   padding-left: 15px;
+   top:-2.7rem;
+   transition: .3s;
   }
   .logo{
     position: fixed;
   }
   .nav-center.active{
-    height:50vh;
+    height:98vh;
     transition: .5s;
    overflow-y: hidden;
 
@@ -151,5 +204,19 @@ html,body{
     transition: .5s;
 
   }
-
+  .social-icons.active{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: auto;
+    top:45vh;
+   
+  }
+  .fab{
+    width:10px;
+    
+  }
+ 
 }
