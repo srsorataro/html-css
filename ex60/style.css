@@ -34,7 +34,7 @@ body,html{
     margin: auto;
     top:30%;
 }
-button{
+.modal-btn{
     display: flex;
     position: relative;
     margin: auto;
@@ -49,16 +49,88 @@ button{
     box-shadow:  1px 1px 3px rgba(0, 0, 0, 0.335), inset 1px 1px 3px rgba(0, 0, 0, 0.302);
 
 }
-button:active{
-    box-shadow:  1px 1px 3px rgb(31, 179, 224), inset 1px 1px 3px rgb(26, 185, 166);
+.modal-btn:active{
+    box-shadow:   2px 2px 3px rgb(0, 3, 1), inset 2px 2px 5px rgb(0, 0, 0);
+    font-size: 12px;
     
 }
- button:hover{
-    border: 2px solid rgb(78, 161, 212);
+.modal-btn:hover{
+    padding-top: 9px;
+    border: 2px solid rgba(146, 245, 24, 0.295);
     background: white;
     transition: .3s;
-    border: none;
-   color:rgb(78, 161, 212);
+   color:rgb(54, 178, 255);
 
 
  }
+ .modal-container{
+    display: none;
+    width:50vw;
+    height:28vh;
+    background: rgb(255, 255, 255);
+    color:rgb(12, 3, 3);
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    left:30vw;
+    top:6vh;
+    border-radius: 10px;
+    
+   
+ }
+ .modal-container h3{
+    font-size: 25px;
+    text-align: center;
+    position: relative;
+    margin: auto;
+    top:30%;
+
+ }
+ .close-btn{
+   
+    position: relative;
+    left:47vw;
+    top:-4vh;
+    width: 0;
+    height: 0;
+    padding: 0;
+    border: 0;
+
+  
+
+ }
+ 
+ .fas{
+    display: block;
+    border-top: 2px solid ;
+    width:20px;
+    position: relative;
+    border-top-color: transparent;
+   
+ }
+ .fas::after{
+    content: '';
+    display: block;
+    width:20px;
+    height:4px;
+    margin-top: 5px;
+    background: rgb(225, 33, 29);
+    transform:   translateY(-10px) rotate(-135deg);
+    box-shadow: 1px 1px  2px rgba(0, 0, 0, 0.456);
+ }
+
+ .fas::before{
+    content: '';
+    display: block;
+    width:20px;
+    height:4px;
+    margin-top: 5px;
+    background:  rgb(225, 33, 29);
+    transform:  translateY(-1.5px)  rotate(135deg);
+    box-shadow: 1px 1px  2px rgba(0, 0, 0, 0.432);
+ }
+
+ .modal-btn.open-modal .modal-container{
+   display: block;
+ }
+
