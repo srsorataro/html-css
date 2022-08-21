@@ -147,6 +147,15 @@ button{
         background: black;
         position: absolute;
         top:10vh;
+        
+    }
+    .cab:hover  {
+        
+        background: white;
+       
+    }
+    .btn-f:hover{
+        color:black;
     }
    
   h1{
@@ -160,6 +169,8 @@ button{
     
 
    }
+  
+ 
    .btn-menu.active .btn-f{
 
     border-top: none;
@@ -194,6 +205,7 @@ button{
    }
    a{
     left:50vw;
+    top:-.4vh
    }
 }
 @media(max-width:630px){

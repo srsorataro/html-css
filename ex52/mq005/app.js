@@ -6,4 +6,5 @@ const ulMenu= document.querySelector('.ul');
 btnMenu.addEventListener('click', () =>{
     btnMenu.classList.toggle('active')
     ulMenu.classList.toggle('active')
+    
 })
