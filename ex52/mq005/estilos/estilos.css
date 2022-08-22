@@ -13,212 +13,48 @@
 body, html{
     width:100vw;
     height: 100vh;
+    background-color: grey;
 }
-
 header{
-    width:100vw;
-    height: 100px;
-    background: radial-gradient(rgb(169, 164, 164),rgb(111, 110, 110));
+    background-color: grey;
 }
- h1{position: relative;
+header h1{
+    padding: 10px;
     text-align: center;
-    margin: auto;
-    top:-1rem;
-    
-}
 
-ul{
-  position: relative;
-   display: flex;
-    top:1.6rem;
-    gap:.5rem;
-    
 }
-li{
-    
-    width:85px;
-    height:35px;
-    border-radius: 5px;
-    position: relative;
-    background: rgb(77, 75, 75);
-    cursor: pointer;
-    top:-1.5rem;
+menu{
+    display: block;
 }
-a{
-    position: relative;
-    left:13px;
-    top:6px;
-    color:white
-  
+menu ul li a {
+    display: block;
+    padding: 10px;
+    background-color: rgb(86, 86, 86);
+    color:white;
+    text-align: center;
+    border-top: 2px solid grey;
+
 }
-li:hover{
-    background: rgb(157, 151, 151);
+menu ul li a:hover{
+    background-color: rgb(159, 159, 159);
+
 }
 main{
-    width: 100vw;
-    height: 120vh;
-    background: rgba(0, 0, 0, 0.323);
-    background-size: cover;
+    width:90vw;
+    background-color: #fff;
+    margin: auto;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
 
 }
-article{
-    position: absolute;
-   border-radius: 10px;
-    display: block;
-    width:80vw;
-    height: 70vh;
-    background: white;
-    position: relative;
-    margin:auto;
-    top:.3rem;
-    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.388), -2px -1px 3px rgba(0, 0, 0, 0.302);
-    padding: 15px;
- 
+article h2{
+   
+    padding-bottom: 10px;
+
 }
-h2{
-    font-family: Open Sans;
-    font-size: 1.9rem;
-}
-p{
-    font-family: Arial, Helvetica, sans-serif;
+article p {
     text-align: justify;
-    text-indent: 30px;
-    line-height: 1.3rem;
-    font-size: 1rem;
-    margin: 15px 0px;
-}
-
-button{
-    border: none;
-    background: transparent;
-    position: relative;
-    left:89vw;
-    cursor: pointer;
-
-
-}
-
-.btn-f{
-    display: none;
-    border-top: 2px solid;
-    width:30px;
-    position: relative;
-    top:2rem;
-    color:white;
-    
-    
-   
-}
-.btn-f::after,.btn-f::before{
-    content: '';
-    display: block;
-    border-top: 2px solid;
-    width:30px;
-    margin-top: 6px;
-}
-@media(max-width:841px){
-    article{
-         height: 90vh;
-
-    }
-    ul{
-        display: none;
-        
-        
-
-    }
-    
-    .btn-f{
-        position: absolute;
-        display: block;
-        top:-.9vh;
-        left:-42vw;
-        z-index: 10;
-
-    }
-   
-   
-
-
-    .cab{
-        display: block;
-        width:100vw;
-        height: 40px;
-        background: black;
-        position: absolute;
-        top:10vh;
-        
-    }
-    .cab:hover  {
-        
-        background: white;
-       
-    }
-    .btn-f:hover{
-        color:black;
-    }
-   
-  h1{
-    top:.5vh;
-  }
-   ul.active{
-    display:block;
-    position: relative;
-    left:44vw;
-    z-index: 1;
-    
-
-   }
-  
- 
-   .btn-menu.active .btn-f{
-
-    border-top: none;
-   }
-   .btn-menu.active .btn-f::after{
-    position: relative;
-    transform:  rotate(-135deg);
-    top:-6.5px;
-    transition: .3s;
-    
-
-   }
-   .btn-menu.active .btn-f::before{
-    transform:  rotate(135deg);
-    transition: .3s;
-}
-   li{
-    display: flex;
-    width:150vh;
-    height:35px;
-    border-radius: 5px;
-    position: relative;
-    background: rgb(77, 75, 75);
-    cursor: pointer;
-    top:6vh;
-    left:-49vw;
-    border-bottom:2px solid rgb(85, 83, 83) ;
-    justify-content: space-between;
-    align-items: center;
-    
-    
-   }
-   a{
-    left:50vw;
-    top:-.4vh
-   }
-}
-@media(max-width:630px){
-    article{
-         height: 100vh;
-
-    }
-   
-}
-@media(max-width:541px){
-    article{
-         height: 115vh;
-
-    }
-   
+    margin-bottom: 10px;
+    text-indent: 10px;
 }
