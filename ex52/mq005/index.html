@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Query</title>
     <link rel="stylesheet" href="./estilos/estilos.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
 </head>
 <body>
     <header>
-        <div class="cab">
-            <button class="btn-menu">
-                <span class="btn-f"></span>
-            </button>
-        </div>
+      
         <h1>Meu site</h1>
-        <menu class="menu">
+        <span  id="burguer" class="material-icons" onclick="clickMenu()">menu</span>
+     
+       
+        <menu id="items">
             <ul class="ul">
                 <li><a href="#">Opção 1</a></li>
                 <li><a href="#">Opção 2</a></li>
@@ -39,6 +39,7 @@
         </article>
        
     </main>
+    
     <script src="./app.js"></script>
     
 </body>

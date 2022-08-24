@@ -13,14 +13,13 @@
 body, html{
     width:100vw;
     height: 100vh;
-    background-color: grey;
+    background-color: lightgrey;
 }
 header{
    
-    display: flex;
+    
     background-color: grey;
-    justify-content: center;
-    align-items: center;
+   
 }
 header h1{
     padding: 10px;
@@ -32,26 +31,21 @@ header h1{
 
 }
 menu{
-    display: block;
+    display:none;
     
 }
-ul{ position: absolute;
-    display:flex;
-    top:9vh;
-    left:4.5vw;
+ menu ul{ 
+    display:block;
+    
 }
 menu ul li a {
-    position: relative;
     display: block;
     padding: 10px;
     background-color: rgb(86, 86, 86);
     color:white;
     text-align: center;
-    border-top: 2px solid grey;
-    justify-content: space-between;
-    border-radius: 5px;
-    width:100px;
-    margin-left: 10px;
+    border-top:1px solid rgb(183, 183, 183);
+  
 
 
 }
@@ -63,114 +57,34 @@ menu ul li a:hover{
 main{
     width:90vw;
     background-color: #fff;
-    margin: auto;
-    margin-top: 40px;
+    margin:auto;
+    margin-top:10px;
     padding: 20px;
     border-radius: 10px;
+    box-shadow: 2px 2px 5px  rgba(0, 0, 0, 0.351);
 
 }
 article h2{
    
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 
 }
 article p {
     text-align: justify;
-    margin-bottom: 10px;
-    text-indent: 10px;
+    margin-bottom: 20px;
+    text-indent: 20px;
 }
-.cab{
+#burguer{
+    background-color: rgb(50, 50, 50);
+    display: block;
+    color:white;
+    text-align: center;
+    padding: 10px;
     
-    display: none;
-    
-}
-@media(max-width:792px){
-    menu{
-        display: none;
-    }
-  
-    .menu.active{
-        display: block;
-        margin-bottom: 35vh;
-    }
-    ul{
-        display: block;
-        
-    }
-  
-    .cab{
-        display: block;
-       background: rgb(10, 22, 57);
-        width:100vw;
-        height:28px;
-        position: absolute;
-        top:68px;
-       
-       
-        
-    }
-  
-    .btn-menu{
-        display: block;
-        width:28px;
-        height:25px;
-        position: relative;
-        margin: auto;
-        border: 2px solid aquamarine;
-       
-        
-    }
-    
-.btn-menu:hover{
-    position: relative;
-    top:-5px;
-    border-color: rgb(2, 115, 77);
-    width:35px;
-    height:35px;
 
 }
-    .btn-f{
-        display: block;
-        border-top: 2px solid;
-        position: relative;
-        width:20px;
-        margin: auto;
-    }
-    .btn-f:hover{
-        width:25px;
-
-    }
-    .btn-f::after,.btn-f::before{
-        display: block;
-        content: '';
-        width:20px;
-        margin-top: 4px;
-        background:black;
-        height: 2px;
-    }
-    .btn-menu.active .btn-f{
-        
-        border-top: none;
-       
-
-        
-    }
-    .btn-menu.active .btn-f::after{
-        position: relative;
-        transform: rotate(-135deg);
-        top:-6px;
-        transition: .5s;
-       
-
-    }
-    .btn-menu.active .btn-f::before{
-        transform: rotate(135deg);
-        transition: .5s;
-
-        
-    }
-    .btn-f:hover::after,.btn-f:hover::before{
-        width:25px;
-
+#burguer:hover{
+    background-color: white;
+    color:black;
 }
-}
+

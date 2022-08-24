@@ -1,8 +1,9 @@
-const btn = document.querySelector('.btn-menu')
-const menu = document.querySelector('.menu')
+function clickMenu(){
+    if(items.style.display == 'block'){
+        items.style.display ='none'
+    }else{
+        items.style.display ='block'
 
-
-btn.addEventListener('click',()=>{
-    btn.classList.toggle('active')
-    menu.classList.toggle('active')
-})
+    }
+   
+}
