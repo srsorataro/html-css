@@ -16,7 +16,10 @@ body, html{
     background-color: grey;
 }
 header{
+    display: flex;
     background-color: grey;
+    justify-content: center;
+    align-items: center;
 }
 header h1{
     padding: 10px;
@@ -24,7 +27,7 @@ header h1{
 
 }
 menu{
-    display: block;
+    display: none;
 }
 menu ul li a {
     display: block;
@@ -57,4 +60,59 @@ article p {
     text-align: justify;
     margin-bottom: 10px;
     text-indent: 10px;
+}
+@media(max-width:792px){
+    .cab{
+        display: block;
+       background: rgb(10, 22, 57);
+        width:100vw;
+        height:28px;
+        position: absolute;
+        top:40px;
+       
+        
+    }
+  
+    .btn-menu{
+        display: block;
+        width:28px;
+        height:25px;
+        position: relative;
+        margin: auto;
+        border: 2px solid aquamarine;
+       
+        
+    }
+    
+.btn-menu:hover{
+    position: relative;
+    top:-5px;
+    border-color: rgb(2, 115, 77);
+    width:35px;
+    height:35px;
+
+}
+    .btn-f{
+        display: block;
+        border-top: 2px solid;
+        position: relative;
+        width:20px;
+        margin: auto;
+    }
+    .btn-f:hover{
+        width:25px;
+
+    }
+    .btn-f::after,.btn-f::before{
+        display: block;
+        content: '';
+        width:20px;
+        margin-top: 4px;
+        background:black;
+        height: 2px;
+    }
+    .btn-f:hover::after,.btn-f:hover::before{
+        width:25px;
+
+}
 }
