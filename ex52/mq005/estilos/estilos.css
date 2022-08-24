@@ -24,20 +24,34 @@ header{
 header h1{
     padding: 10px;
     text-align: center;
+    position: relative;
+   
 
 }
 menu{
-    display: none;
+    display: block;
+    
+}
+ul{ position: absolute;
+    display: flex;
+    top:50px;
 }
 menu ul li a {
+    position: relative;
     display: block;
     padding: 10px;
     background-color: rgb(86, 86, 86);
     color:white;
     text-align: center;
     border-top: 2px solid grey;
+    justify-content: space-between;
+    left:-54vw;
+    width:100px;
+    margin-left: 10px;
+
 
 }
+
 menu ul li a:hover{
     background-color: rgb(159, 159, 159);
 
@@ -46,8 +60,8 @@ main{
     width:90vw;
     background-color: #fff;
     margin: auto;
-    margin-top: 10px;
-    padding: 10px;
+    margin-top: 40px;
+    padding: 20px;
     border-radius: 10px;
 
 }
@@ -61,14 +75,26 @@ article p {
     margin-bottom: 10px;
     text-indent: 10px;
 }
+.cab{
+    display: none;
+}
 @media(max-width:792px){
+    menu{
+        display: none;
+    }
+    .menu.active{
+        display: block;
+    }
+    ul{
+        display: block;
+    }
     .cab{
         display: block;
        background: rgb(10, 22, 57);
         width:100vw;
         height:28px;
         position: absolute;
-        top:40px;
+        top:68px;
        
         
     }
@@ -110,6 +136,27 @@ article p {
         margin-top: 4px;
         background:black;
         height: 2px;
+    }
+    .btn-menu.active .btn-f{
+        
+        border-top: none;
+       
+
+        
+    }
+    .btn-menu.active .btn-f::after{
+        position: relative;
+        transform: rotate(-135deg);
+        top:-6px;
+        transition: .5s;
+       
+
+    }
+    .btn-menu.active .btn-f::before{
+        transform: rotate(135deg);
+        transition: .5s;
+
+        
     }
     .btn-f:hover::after,.btn-f:hover::before{
         width:25px;
