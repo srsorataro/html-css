@@ -16,6 +16,7 @@ body, html{
     background-color: grey;
 }
 header{
+   
     display: flex;
     background-color: grey;
     justify-content: center;
@@ -24,7 +25,9 @@ header{
 header h1{
     padding: 10px;
     text-align: center;
-    position: relative;
+    
+ 
+    
    
 
 }
@@ -33,8 +36,9 @@ menu{
     
 }
 ul{ position: absolute;
-    display: flex;
-    top:50px;
+    display:flex;
+    top:9vh;
+    left:4.5vw;
 }
 menu ul li a {
     position: relative;
@@ -45,7 +49,7 @@ menu ul li a {
     text-align: center;
     border-top: 2px solid grey;
     justify-content: space-between;
-    left:-54vw;
+    border-radius: 5px;
     width:100px;
     margin-left: 10px;
 
@@ -76,18 +80,24 @@ article p {
     text-indent: 10px;
 }
 .cab{
+    
     display: none;
+    
 }
 @media(max-width:792px){
     menu{
         display: none;
     }
+  
     .menu.active{
         display: block;
+        margin-bottom: 35vh;
     }
     ul{
         display: block;
+        
     }
+  
     .cab{
         display: block;
        background: rgb(10, 22, 57);
@@ -95,6 +105,7 @@ article p {
         height:28px;
         position: absolute;
         top:68px;
+       
        
         
     }
