@@ -77,9 +77,9 @@ const menu = [
 
   window.addEventListener('DOMContentLoaded', function(){
    let displayMenu = menu.map(function(item){
-   // console.log(item)
+  
     return `  <article class="menu-item">
-    <img src=${item.img}  class="photo" alt=${item.title}>
+    <img src=${item.img}   class="photo" alt=${item.title}>
     <div class="item-info">
         <header>
             <h4>${item.title}</h4>
@@ -94,6 +94,7 @@ const menu = [
     </div>
 
 </article>`
+
 
    })
    displayMenu = displayMenu.join("")
