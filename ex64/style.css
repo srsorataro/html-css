@@ -61,66 +61,80 @@ body{
     width:100vw;
     height: 100vw;
 }
-h2{ position: relative;
+section{
     display: block;
-    font-weight: bolder;
-    font-size: 2rem;
+    width:500px;
+    height: 500px;
+    position: relative;
+    margin: auto;
+    top:20vh;
+}
+
+section article img{
+    position: relative;
+    display: flex;
+    width:400px;
+    height: 200px;
+    margin: auto;
+    border: 3px solid var(--clr-gold);
+    border-radius: 10px;
    
-    width:200px;
-    align-items: center;
-    margin:auto;
-    text-align: center;
-    top:5vh;
+
+
     
+    
+
+} 
+ h4{
+    font-family: var(--ff-primary);
+  
+}
+.line{
+    position: relative;
+    border-bottom: 1px solid rgb(184, 184, 184);
+    bottom:1rem;
+    width:24.5em;
+}
+.title{
+    display: flex;
+    position: relative;
+    margin: auto;
+    justify-content: center;
+    left:5vh;
+    margin-bottom: 2vh;
+    line-height: -2vh;
+ 
 }
 .underline{
     position: relative;
-    display: flex;
-    width:80px;
-    border-bottom: 3px solid rgb(211, 158, 0);
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    top:6vh;
-
-}
-.photo{
     display: block;
-    width:290px;
-    height: 150px;
-    position: relative;
-    margin: auto;
-    top:15vh;
-    border-radius: 10px;
-    border: 3px solid rgb(211, 158, 0);
-    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.398);
+    border-bottom: 3px solid var(--clr-gold);
+    width: 60px;
+    right:85px;
+    top:.9vh;
 }
-h4{
-    position: absolute;
-    font-family:var(--ff-primary);
-    font-weight: 700;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.287);
-
+.item-info{
+    display: inline-block;
+    position: relative;
+    left:52px;
+   
+   
 }
  .price{
+    position: relative;
+    left:21.5em;
+    bottom:1.2em;
     color:#c59d5f;
-    z-index: 1;
-   
-   
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.58);
 }
-.menu-item{ 
-   
 
-
-}
-header{
-    position: absolute;
+.item-text{
+    font-family:  var(--ff-primary);
     display: block;
-    width: 290px;
-    height: 30px;
+    text-align: justify;
+    width: 400px;
     margin: auto;
-    left: 20.8vw;
-    top:48vh;
-    border:  2px solid;
+   
 
+    
 }
