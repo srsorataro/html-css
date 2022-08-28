@@ -81,17 +81,25 @@ const menu = [
 //carregar items
   window.addEventListener('DOMContentLoaded', function(){
     displayMenuItems(menu)
+    
   
   })
 //filtro de items
 filterBtns.forEach(function(btn){
   btn.addEventListener('click', function(e){
     const  category = e.currentTarget.dataset.id
-    const menuCategory = menu.filter(function(menuitem){
-      console.log(menuitem.category)
-      return menuitem
+    const menuCategory = menu.filter(function(menuItem){
+      //console.log(menuItem.category)
+      if(menuItem.category === category)
+      return menuItem
     })
-    console.log(menuCategory)
+    //console.log(menuCategory)
+    if(category === 'all'){
+      displayMenuItems(menu)
+    }
+    else{
+      displayMenuItems(menuCategory)
+    }
 
   })
 })
