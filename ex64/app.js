@@ -1,3 +1,7 @@
+//get only unique categories -HARDEST ONE 
+// iterate over categories return buttons
+// make sure to select  buttons when are available 
+
 //items
 const menu = [
     {
@@ -82,35 +86,17 @@ const menu = [
   },
   ];
   const sectionCenter = document.querySelector('.section-center')
-  const filterBtns = document.querySelectorAll('.filter-btn')
+  const container = document.querySelector('.btn-container')
 
 
  
 //carregar items
   window.addEventListener('DOMContentLoaded', function(){
     displayMenuItems(menu)
-    
-  
-  })
-//filtro de items
-filterBtns.forEach(function(btn){
-  btn.addEventListener('click', function(e){
-    const  category = e.currentTarget.dataset.id
-    const menuCategory = menu.filter(function(menuItem){
-      //console.log(menuItem.category)
-      if(menuItem.category === category)
-      return menuItem
-    })
-    //console.log(menuCategory)
-    if(category === 'all'){
-      displayMenuItems(menu)
-    }
-    else{
-      displayMenuItems(menuCategory)
-    }
+    displayMenuButtos()
 
   })
-})
+//filtro de items
 
 
 
@@ -140,5 +126,41 @@ filterBtns.forEach(function(btn){
      displayMenu = displayMenu.join("")
      sectionCenter.innerHTML = displayMenu
     
+
+  }
+  function displayMenuButtos(){
+    const categories = menu.reduce(function(values,item){
+      if(!values.includes(item.category)){
+        values.push(item.category)
+      }
+      return values
+    },
+    ['all']
+    )
+    const categoryBtn =  categories.map(function(category){
+      return`<button type="button" class="filter-btn" data-id=${category}>${category}</button>`
+    })
+  .join("")
+  container.innerHTML = categoryBtn
+  const filterBtns = container.querySelectorAll('.filter-btn')
+  filterBtns.forEach(function(btn){
+    btn.addEventListener('click', function(e){
+      const  category = e.currentTarget.dataset.id
+      const menuCategory = menu.filter(function(menuItem){
+        //console.log(menuItem.category)
+        if(menuItem.category === category)
+        return menuItem
+      })
+      //console.log(menuCategory)
+      if(category === 'all'){
+        displayMenuItems(menu)
+      }
+      else{
+        displayMenuItems(menuCategory)
+      }
+  
+    })
+  })
+  
 
   }
