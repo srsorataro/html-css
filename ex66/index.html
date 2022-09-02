@@ -9,21 +9,28 @@
     
 </head>
 <body>
+    <!--Pré-carregamento-->
+    <div class="preloader" alt="preloader">
+        <img src="./preloader.gif" alt="preloader" class="preloader-item" >
+    </div>
     <!--cabeçalho-->
     <header>
       
         <video  class="video-container" controls muted autoplay loop >
             <source src="./video.mp4" type="video/mp4">
         </video>
-     
+        <h1>Video Project</h1>
+            <!--video switch-->
+        <button class="switch-btn">
+            <span>Play</span>
+            <span>Pause</span>
+            <span class="switch"></span>
+           
+        </button>
+    
     </header>
-    <h1>Video Project</h1> 
-    <!--video switch-->
-    <button class="shitch-btn">
-        <span>Play</span>
-        <span>Pause</span>
-        <span class="switch"></span>
-    </button>
+    
+
 
     <script src="./app.js"></script>
 </body>

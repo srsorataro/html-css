@@ -80,7 +80,6 @@ h1{
     text-align: center;
     margin: auto;
     color:var(--clr-white);
-    top:-50vh;
     height: 0;
 
 }
@@ -118,38 +117,78 @@ header::after{
    
 
 }
-.shitch-btn{
-    display: block;
-    width:150px;
-    height:40px;
-    border: none;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.415),
-   inset -3px -3px 3px rgba(0, 0, 0, 0.537);
-    border-radius: 10px;
-    background: white;
-    z-index: 2;
+.switch-btn{
     position: absolute;
-    top:90vh;
-    left:2vw;
+    bottom: 7%;
+    left: 7%;
+    width: 8rem;
+    height: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
-}
-span:nth-child(1){
-    
-    background: blue;
-    color:rgb(247, 231, 231);
     border-radius: 10px;
+    border: none;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.314), 0px 0px 1px ;
+  
+}
+.switch-btn span{
+    padding: 15px;
+    font-size: 0.85rem;
+    display: inline-block;
+    color:rgb(0, 191, 255);
+    cursor: pointer;
+    text-transform: capitalize;
+}
+.switch{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top:0;
+    left:0;
+    background: var(--clr-primary-5);
+    border-radius: 10px;
+    margin: 0;
     display: block;
-    width: 6vw;
-    height: 6.5vh;
-    justify-content: center;
-    align-items: center;
+    transition: .5s;
+    overflow: hidden;
+}
+.switch::before{
+    position: absolute;
+    content:'';
+    background: radial-gradient( white,rgb(219, 237, 243));
+    width: 50%;
+    height: 100%;
+    top:0;
+  
+    transform: skewX(45deg) translateX(-300%);
 
     
-   
+    transition:.5s;
 }
-span{
-  
+.switch:hover::before{
+    
+    transform: skewX(45deg) translateX(300%);
+
+}
+.active .switch{
+    left:50%;
+    transition: .5s;
+}
+.preloader{
+    position: fixed;  
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background: var(--clr-white);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    z-index: 999;
+    transition: 10s;
+}
+.hide-preloader{
+    z-index: -999;
+    visibility: hidden;
 }
