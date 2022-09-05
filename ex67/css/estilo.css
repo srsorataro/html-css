@@ -54,9 +54,104 @@ body {
     color: var(--clr-grey-1);
     line-height: 1.5;
     font-size: 0.875rem;
-  }
+   
+}
 header{
   min-height: 100vh;
+  background: url(../srsorataro_city_moon.png)  no-repeat;
+  background-size: cover;
+  background-position: center;
+
   
 }
 
+.nav-center{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+ul{
+
+  list-style-type: none;
+  display: flex;
+}
+a{
+  font-size:1.2rem;
+  padding: 2rem;
+  text-decoration: none;
+  color: #fff;
+  text-shadow: 0 0 5px black;
+}
+a:hover{
+  font-weight: 700;
+}
+.banner{
+  position: relative;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  top:50vh;
+}
+.scroll-link{
+  font-family: var(--ff-primary);
+  padding: .8rem 4rem;
+  border: 2px solid;
+  border-radius: 5px;
+}
+.scroll-link:hover{
+  background: #fff;
+  color:var(--clr-grey-4);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.447);
+  text-shadow: none;
+ 
+}
+.container{
+  font-family: var(--ff-secondary);
+  text-align: center;
+  line-height: 5rem;
+  position: relative;
+  top:-5rem
+}
+.container h1{
+  letter-spacing: 1rem;
+  font-size: 2.5rem;
+  color: rgb(228, 227, 255);
+  text-shadow: 0px 0px 5px black;
+}
+#sr{
+  display: flex;
+  position: absolute;
+  color:#fff;
+  left:2rem;
+  font-size: 1.8rem;
+  align-items: center;
+}
+p{
+  font-size: 1rem;
+  color:#fff;
+}
+.section{
+  display: flex;
+  padding: 10rem;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--ff-primary);
+  font-size: 1.3rem;
+}
+#about{
+ background: var(--clr-grey-7);
+
+}
+#tours{
+  background: var(--clr-grey-7);
+
+}
+footer p {
+  color:black;
+}
+  .top-link{
+    display: flex;
+    justify-content: center;
+
+  }
