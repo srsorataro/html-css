@@ -58,13 +58,50 @@ body {
 }
 header{
   min-height: 100vh;
+  background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7));
   background: url(../srsorataro_city_moon.png)  no-repeat;
   background-size: cover;
   background-position: center;
 
   
 }
+.menu{
+  position: absolute;
+  display: none;
+  border-top: 2px solid;
+  width: 30px;
+  left:50%;
+  top:2%;
+  color: black;
+  cursor: pointer;
+}
+.menu::after, .menu::before{
+  display: block;
+  content: '';
+  height: 2px;
+  width:30px;
+  margin-top: 6px;
+  background: black;
+}
+.nav-toggle.active .menu{
+  border-top:transparent;
+  transition: .5s;
 
+  
+}
+ .nav-toggle.active .menu::after{
+  transform: rotate(135deg);
+  transition: .5s;
+  
+
+}
+.nav-toggle.active .menu::before{
+  position: absolute;
+  top:-.44px;
+  transform: rotate(-135deg);
+  transition: .5s;
+
+}
 .nav-center{
   display: flex;
   justify-content: space-between;
@@ -82,6 +119,7 @@ a{
   text-decoration: none;
   color: #fff;
   text-shadow: 0 0 5px black;
+  cursor: pointer;
 }
 a:hover{
   font-weight: 700;
@@ -93,11 +131,20 @@ a:hover{
   justify-content: center;
   top:50vh;
 }
+.nav-toggle{
+  background: transparent;
+  border: transparent;
+  cursor: pointer;
+}
 .scroll-link{
   font-family: var(--ff-primary);
-  padding: .8rem 4rem;
+  font-weight: 500;
+  padding: .5rem 1rem;
   border: 2px solid;
-  border-radius: 5px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  font-size: 1rem;
 }
 .scroll-link:hover{
   background: #fff;
@@ -111,13 +158,27 @@ a:hover{
   text-align: center;
   line-height: 5rem;
   position: relative;
-  top:-5rem
+  top:-6rem
 }
 .container h1{
-  letter-spacing: 1rem;
-  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: .5rem;
+  font-size: 4.5rem;
   color: rgb(228, 227, 255);
   text-shadow: 0px 0px 5px black;
+  line-height: 8rem;
+}
+.container p{
+  line-height: 1.3rem;
+  text-align: center;
+  display: block;
+  width: 700px;
+}
+.links-container{
+
+  position: relative;
+  top:.6rem;
+  text-transform: capitalize;
 }
 #sr{
   display: flex;
@@ -139,19 +200,261 @@ p{
   font-family: var(--ff-primary);
   font-size: 1.3rem;
 }
+#about,
+#tours,
+#services{
+height: 80px;
+  text-transform: uppercase;
+}
+h2{
+ position: relative;
+ top:-8.5rem;
+ font-size: 2.5rem;
+
+}
 #about{
- background: var(--clr-grey-7);
+ background: var(--clr-grey-9);
 
 }
 #tours{
-  background: var(--clr-grey-7);
+  background: var(--clr-grey-9);
 
 }
+ footer{
+  width: 100vw;
+  padding: .5px;
+  background-color: var(--clr-grey-1);
+}
 footer p {
-  color:black;
+  font-weight: 200;
+  letter-spacing: .2rem;
+  font-family: var(--ff-secondary);
+  font-size: 1.2rem;
+  color:#fff;
+  text-transform: capitalize;
 }
   .top-link{
     display: flex;
     justify-content: center;
 
   }
+  span{
+    color:rgb(98, 218, 237);
+  }
+@media screen  and (max-width:650px){
+  .links-container{
+    display: none;
+    position: relative;
+    top:20px;
+    left:-50vw;
+  
+    
+  
+   
+  }
+  .nav-toggle{
+    background: transparent;
+    border: transparent;
+  }
+  .menu{
+    display: block;
+  }
+  .links{
+    text-align: center;
+    line-height: 1rem;
+    display: block;
+    width: 150vw;
+    height: 30vh;
+    position: relative;
+   background-color: rgba(34, 34, 34, 0.886);
+   margin-left: 150px;
+  
+    
+    
+   
+    
+  }
+  li{
+    position: relative;
+    left:-4rem;
+    font-size: 5rem;
+    line-height: 1rem;
+    border-top: 1px solid rgba(154, 154, 154, 0.612);
+  }
+  #sr{
+   display: none;
+    
+  }
+  .links-container.active {
+    display: block;
+   
+   
+ 
+  }
+  .container.active {
+    position: relative;
+    top:-15rem;
+  }
+   .container h1{
+    font-size: 2.4rem;
+  }
+   p{
+    font-family: var(--ff-secondary);
+    text-align: center;
+    font-size:  2rem;
+    
+  }
+
+}
+@media screen  and (max-width:700px){
+  .links-container{
+    display: none;
+    position: relative;
+    top:40px;
+    left:-50vw;
+  
+  }
+   .container h1{
+    font-size: 2.4rem;
+  }
+  .menu{
+    display: block;
+  }
+  .container p{
+    font-family: var(--ff-secondary);
+    text-align: center;
+    width: 450px;
+    font-size: 1rem;
+    
+    
+  }
+  .links{
+    text-align: center;
+    line-height: 1rem;
+    display: block;
+    width: 150vw;
+    height: 30vh;
+    position: relative;
+   background-color: rgba(34, 34, 34, 0.886);
+   margin-left: 150px;
+  
+    
+    
+   
+    
+  }
+
+  li{
+    position: relative;
+    left:-4rem;
+    font-size: 5rem;
+    line-height: 1rem;
+    border-top: 1px solid rgba(154, 154, 154, 0.612);
+  }
+  .links-container.active {
+    display: block;
+   
+   
+ 
+  }
+  .section{
+    display: flex;
+    padding: 5rem;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--ff-primary);
+    font-size: 1.3rem;
+  }
+  #about,
+  #tours,
+  #services{
+  height: 80px;
+    text-transform: uppercase;
+  }
+  h2{
+   position: relative;
+   top:-4rem;
+   font-size: 2rem;
+  
+  }
+  #about{
+   background: var(--clr-grey-9);
+  
+  }
+  #tours{
+    background: var(--clr-grey-9);
+  
+  }
+   footer{
+    width: 100vw;
+    background-color: var(--clr-grey-1);
+  }
+  footer p {
+    font-weight: 200;
+    font-family: var(--ff-secondary);
+    font-size: .8rem;
+    color:#fff;
+    text-transform: capitalize;
+  }
+    .top-link{
+      display: flex;
+      justify-content: center;
+  
+    }
+    span{
+      color:rgb(98, 218, 237);
+    }
+
+}
+@media screen  and (max-width:800px){
+  .links-container{
+    display: none;
+    position: relative;
+    top:40px;
+    left:-38vw;
+  
+  }
+   .container h1{
+    font-size: 2.8rem;
+  }
+  .menu{
+    display: block;
+  }
+  .container p{
+    font-family: var(--ff-secondary);
+    text-align: center;
+    width: 500px;
+    font-size: 1rem;
+    
+    
+  }
+  .links{
+    text-align: center;
+    line-height: 1rem;
+    display: block;
+    width: 150vw;
+    height: 30vh;
+    position: relative;
+   background-color: rgba(34, 34, 34, 0.886);
+   margin-left: 8rem;
+  
+    
+    
+   
+    
+  }
+
+  li{
+    position: relative;
+    left:-4rem;
+    font-size: 5rem;
+    line-height: 1rem;
+    border-top: 1px solid rgba(154, 154, 154, 0.612);
+  }
+  .links-container.active {
+    display: block;
+   
+   
+ 
+  }
+}
