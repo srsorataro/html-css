@@ -70,7 +70,7 @@ header{
   display: none;
   border-top: 2px solid;
   width: 30px;
-  left:50%;
+  left:47.5%;
   top:2%;
   color: black;
   cursor: pointer;
@@ -240,182 +240,26 @@ footer p {
   }
   span{
     color:rgb(98, 218, 237);
+
+
   }
+
+
 @media screen  and (max-width:650px){
   .links-container{
     display: none;
-    position: relative;
-    top:20px;
-    left:-50vw;
-  
-    
-  
-   
-  }
-  .nav-toggle{
-    background: transparent;
-    border: transparent;
-  }
-  .menu{
-    display: block;
-  }
-  .links{
-    text-align: center;
-    line-height: 1rem;
-    display: block;
-    width: 150vw;
-    height: 30vh;
-    position: relative;
-   background-color: rgba(34, 34, 34, 0.886);
-   margin-left: 150px;
-  
+    top:-8vh;
     
     
    
-    
-  }
-  li{
-    position: relative;
-    left:-4rem;
-    font-size: 5rem;
-    line-height: 1rem;
-    border-top: 1px solid rgba(154, 154, 154, 0.612);
-  }
-  #sr{
-   display: none;
-    
-  }
-  .links-container.active {
-    display: block;
-   
-   
- 
-  }
-  .container.active {
-    position: relative;
-    top:-15rem;
-  }
-   .container h1{
-    font-size: 2.4rem;
-  }
-   p{
-    font-family: var(--ff-secondary);
-    text-align: center;
-    font-size:  2rem;
-    
-  }
-
-}
-@media screen  and (max-width:700px){
-  .links-container{
-    display: none;
-    position: relative;
-    top:40px;
-    left:-50vw;
-  
-  }
-   .container h1{
-    font-size: 2.4rem;
-  }
-  .menu{
-    display: block;
-  }
-  .container p{
-    font-family: var(--ff-secondary);
-    text-align: center;
-    width: 450px;
-    font-size: 1rem;
-    
-    
-  }
-  .links{
-    text-align: center;
-    line-height: 1rem;
-    display: block;
-    width: 150vw;
-    height: 30vh;
-    position: relative;
-   background-color: rgba(34, 34, 34, 0.886);
-   margin-left: 150px;
-  
-    
-    
-   
-    
-  }
-
-  li{
-    position: relative;
-    left:-4rem;
-    font-size: 5rem;
-    line-height: 1rem;
-    border-top: 1px solid rgba(154, 154, 154, 0.612);
-  }
-  .links-container.active {
-    display: block;
-   
-   
- 
-  }
-  .section{
-    display: flex;
-    padding: 5rem;
-    justify-content: center;
-    align-items: center;
-    font-family: var(--ff-primary);
-    font-size: 1.3rem;
-  }
-  #about,
-  #tours,
-  #services{
-  height: 80px;
-    text-transform: uppercase;
-  }
-  h2{
-   position: relative;
-   top:-4rem;
-   font-size: 2rem;
-  
-  }
-  #about{
-   background: var(--clr-grey-9);
-  
-  }
-  #tours{
-    background: var(--clr-grey-9);
-  
-  }
-   footer{
-    width: 100vw;
-    background-color: var(--clr-grey-1);
-  }
-  footer p {
-    font-weight: 200;
-    font-family: var(--ff-secondary);
-    font-size: .8rem;
-    color:#fff;
-    text-transform: capitalize;
-  }
-    .top-link{
-      display: flex;
-      justify-content: center;
-  
-    }
-    span{
-      color:rgb(98, 218, 237);
-    }
-
-}
-@media screen  and (max-width:800px){
-  .links-container{
-    display: none;
-    position: relative;
-    top:40px;
-    left:-38vw;
-  
   }
    .container h1{
     font-size: 2.8rem;
+
+  }
+  .container.active{
+    position: absolute;
+    top:-40rem;
   }
   .menu{
     display: block;
@@ -429,27 +273,24 @@ footer p {
     
   }
   .links{
-    text-align: center;
-    line-height: 1rem;
-    display: block;
-    width: 150vw;
-    height: 30vh;
-    position: relative;
-   background-color: rgba(34, 34, 34, 0.886);
-   margin-left: 8rem;
-  
-    
-    
+    display: block; 
    
     
   }
-
-  li{
+  #sr{
+    display: none;
     position: relative;
-    left:-4rem;
-    font-size: 5rem;
-    line-height: 1rem;
-    border-top: 1px solid rgba(154, 154, 154, 0.612);
+    top:-40vh;
+  }
+
+  .nav-center li{
+    position: relative;
+    font-size: 5rem;  
+    top:-5rem;
+    left:-33vw;
+    margin: auto;
+    line-height: 2rem;
+    border-bottom: 1px solid rgb(92, 91, 91);
   }
   .links-container.active {
     display: block;
@@ -457,4 +298,36 @@ footer p {
    
  
   }
+  .nav-center{
+    height: 0vh;
+    transition: .5s;
+    overflow:hidden;
+  }
+  .nav-center.active{
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.368);
+    transition: .5s;
+    overflow: visible;
+    
+  
+  }
+  h2{
+    position: relative;
+    top:-8.8rem;
+    font-size: 1.3rem;
+  }
+  #tours span{
+   margin-left: 2px;
+   font-size: 1.3rem;
+    
+
+  }
+  .title{
+    text-align: center;
+  }
+  footer p{
+    font-size: .875rem;
+   
+  }
+
 }
