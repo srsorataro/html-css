@@ -85,9 +85,12 @@ body {
     letter-spacing: .25rem;
     line-height: -15px;
     align-items: center;
+    position: relative;
+    top:25px;
 }
 .links-container{
-    display: grid;
+    display: block;
+    
     
 }
 ul{
@@ -142,7 +145,7 @@ header{
 .nav-toggle{
     display: none;
     position:absolute;
-    left:50%;
+    left:49%;
     background: black;
 }
 .menu{
@@ -158,12 +161,24 @@ header{
     height: 2px;
     background: black;
 }
+.scroll-link{
+    
+    border: 1px solid;
+    font-size: 1.38rem;
+    border-radius: 5px;
+
+    align-items: center;
+    
+ }
 @media (max-width:600px){
  .links-container{
     position: absolute;
     height: 0;
     overflow: hidden;
-    transition: .5s;
+    transition: .8s;
+    visibility: hidden;
+    overflow-y: hidden;
+   
     
 
    
@@ -173,23 +188,61 @@ header{
     display: block;
     border: none;
     z-index: 999;
+  
     
+ }
+ .links{
+    display: none;
  }
  .show-links{
    
     background: linear-gradient(to bottom, rgba(188, 221, 241, 0.351), rgba(251, 255, 255, 0.255));
-    width: 100%;
-    height: 800px;
-    transition: 5s;
-    overflow: visible;
+    width: 100vw;
+    height: calc(800px  - 80px);
+    visibility: visible;
+    overflow-y: auto;
+    
  }
+.menu.active{
+    border-top: transparent;
+    
+}
+.menu.active::after{
+    transform: rotate(-135deg);
+    position: relative;
+    top:-7.5px;
+    transition: .5s;
+
+}
+.menu.active::before{
+    transform: rotate(135deg);
+    transition: .5s;
+    
+}
  .nav-center.active{
     background: transparent;
     box-shadow: none;
  }
- .links{
+ .show-links .links{
     display: block;
     position:relative;
     top:80px;
+    
  }
+  .links a{
+    display: block;
+    position:relative;
+    text-align: center;
+    font-size: 1.8rem;
+    color:rgba(0, 0, 0, 0.848);
+    border-bottom: 1px solid rgb(210, 210, 210);
+    padding: 5px;
+   
+ 
+  
+ }
+ .links a:hover{
+    color:white;
+ }
+
 }

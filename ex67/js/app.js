@@ -7,11 +7,14 @@
 const btn = document.querySelector('.nav-toggle');
 const linksContainer= document.querySelector('.links-container');
 const center= document.querySelector('.nav-center');
+const menu= document.querySelector('.menu');
 
 
 
 btn.addEventListener('click', ()=>{
     linksContainer.classList.toggle('show-links')
     center.classList.toggle('active')
+    menu.classList.toggle('active')
+
   
 })
