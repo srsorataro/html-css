@@ -4,3 +4,14 @@
 //offfsettop - A Number, representing the  top position  of the element, in pixels
 
 
+const btn = document.querySelector('.nav-toggle');
+const linksContainer= document.querySelector('.links-container');
+const center= document.querySelector('.nav-center');
+
+
+
+btn.addEventListener('click', ()=>{
+    linksContainer.classList.toggle('show-links')
+    center.classList.toggle('active')
+  
+})
