@@ -102,7 +102,7 @@ a{
     font-size: 1.12rem;
     color:#000;
 }
-a:hover{
+.links a:hover{
     font-size: 1.25rem;
     font-weight: 800;
     text-shadow: 0px 0px 5px white;
@@ -121,7 +121,7 @@ li:hover{
 }
 header{
     background-attachment: fixed;
-    background-position: right,center;    background-position: right,center;
+    background-position:  center,center;   
     width: 100%;
     height: 100%;
     background: url(../srsorataro_city_moon.png) no-repeat;
@@ -130,6 +130,7 @@ header{
 .banner{
     display: block;
     height: 98vh;
+    
     
    
   
@@ -141,6 +142,7 @@ header{
     top:50%;
     color:white;
     text-align: center;
+  
 }
 .nav-toggle{
     display: none;
@@ -162,14 +164,58 @@ header{
     background: black;
 }
 .scroll-link{
-    
-    border: 1px solid;
-    font-size: 1.38rem;
-    border-radius: 5px;
-
+    font-size: var(--ff-primary);
+    text-transform: uppercase;
+    border: 2px solid;
+    padding:10px 35px;
+    position: relative;
+    top:15px;
+    transition: .5s;
+    border-radius: 2px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.43);
+    text-shadow: none;
+   
+}
+.scroll-link:hover{
+    background: white;
+    color:rgb(35, 216, 236);
+}
+.container {
+    text-shadow: 0px 2px 5px black;
+}
+.section{
+    display: flex;
     align-items: center;
+    justify-content: center;
+    padding:100px;
+    font-size: 1.85rem;
+    font-family: var(--ff-primary);
+    letter-spacing: var(--spacing);
     
- }
+
+}
+#about, 
+#tours{
+    background: var(--clr-grey-9);
+   
+}
+ .title h2{
+    position: relative;
+    top:-110px;
+
+}
+footer p{
+ font-size: 1.25rem;
+ color:black;
+ letter-spacing: .2rem;
+
+}
+footer{
+    display: block;
+    background:var(--clr-grey-2);
+    height: 20px;
+    
+}
 @media (max-width:600px){
  .links-container{
     position: absolute;
@@ -183,6 +229,23 @@ header{
 
    
  }
+ .title h2{
+   font-size: 1.9rem;
+   letter-spacing: .2rem;
+
+}
+footer p{
+    text-align: center;
+    font-size: 1rem;
+    color:black;
+    letter-spacing: .3rem;
+   
+   }
+ header{
+    
+   background-position-x: 45%;
+   
+}
  .nav-toggle{
     position: absolute;
     display: block;
@@ -210,7 +273,7 @@ header{
 .menu.active::after{
     transform: rotate(-135deg);
     position: relative;
-    top:-7.5px;
+    top:-7.56px;
     transition: .5s;
 
 }
@@ -243,6 +306,7 @@ header{
  }
  .links a:hover{
     color:white;
+    font-size: 2rem;
  }
 
 }
