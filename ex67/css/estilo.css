@@ -197,7 +197,20 @@ header{
 #about, 
 #tours{
     background: var(--clr-grey-9);
+    
    
+}
+#about, 
+#tours,
+#services{
+    text-transform: uppercase;
+
+}
+#about span, 
+#tours span,
+#services span{
+    color:aqua;
+    
 }
  .title h2{
     position: relative;
@@ -216,6 +229,30 @@ footer{
     height: 20px;
     
 }
+.fixed-nav{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:  linear-gradient(to bottom, rgba(188, 221, 241, 0.351), rgb(251, 255, 255));
+    box-shadow: var(--light-shadow);
+}
+.top-link {
+    font-size: 1.25rem;
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    background: var(--clr-secondary);
+    width: 2rem;
+    height: 2rem;
+    display: grid;
+    place-items: center;
+    border-radius: var(--radius);
+    color: var(--clr-white);
+    animation: bounce 2s ease-in-out infinite;
+    visibility: hidden;
+    z-index: -100;
+  }
 @media (max-width:600px){
  .links-container{
     position: absolute;
@@ -229,10 +266,18 @@ footer{
 
    
  }
- .title h2{
-   font-size: 1.9rem;
+ #about, 
+ #tours,
+ #services{
+ 
+   font-size: 1rem;
    letter-spacing: .2rem;
+   
 
+}
+.title{
+    position: relative;
+    top:10px;
 }
 footer p{
     text-align: center;
