@@ -18,14 +18,16 @@ btn.addEventListener('click', ()=>{
    //linksContainer.classList.toggle('show-links')
    //center.classList.toggle('active')
     //menu.classList.toggle('active')
-    const containerHeight = links.getBoundingClientRect().height
-    const linksHeight = linksContainer.getBoundingClientRect().height;
+    const linksHeight = links.getBoundingClientRect().height
+    const  containerHeight = linksContainer.getBoundingClientRect().height;
     if(containerHeight === 0){
         linksContainer.style.height = `${linksHeight}px`
     }
     else{
         linksContainer.style.height = 0
     }
+   
+    
   
 
 })
@@ -45,5 +47,29 @@ window.addEventListener('scroll',()=>{
     if(scrollHeight > 500){
         topLinks.classList.remove('show-links')
     }
+  
     
 })
+
+const scrollLinks = document.querySelectorAll(".scroll-link");
+scrollLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    // prevent default
+    e.preventDefault();
+    // navigate to specific spot
+    const id = e.currentTarget.getAttribute("href").slice(1);
+    
+    const element = document.getElementById('id');
+    const navHeight = navbar.getBoundingClientRect().height;
+    const containerHeight = linksContainer.getBoundingClientRect().height
+    const fixedNav = navbar.classList.contains('fixed-nav')
+    let position = element.offsetTop - navHeight;
+
+    console.log(position);
+   window.scrollTo({
+    left:0,
+    top:position,
+   });
+   linksContainer.style.height = 0;
+  });
+});
