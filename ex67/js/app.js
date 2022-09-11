@@ -11,20 +11,24 @@ date.innerHTML = new Date().getFullYear();
 const btn  = document.querySelector('.nav-toggle');
 const linksContainer= document.querySelector('.links-container');
 const links = document.querySelector('.links');
+const menu = document.querySelector('.menu')
 
 
 
 
 btn.addEventListener('click', function (){
    linksContainer.classList.toggle('show-links');
+   menu.classList.toggle('active');
    window.addEventListener('scroll', function (){
     const  scrollHeight  = window.pageYOffset;
    
    if(scrollHeight >= 1000 ){
     console.log("helo");
     linksContainer.classList.add('show-links');
+    menu.classList.add('active');
 }else{
     linksContainer.classList.remove("show-links");
+    menu.classList.remove('active');
 }
    })
   

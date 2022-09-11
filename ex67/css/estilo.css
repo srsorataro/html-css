@@ -48,6 +48,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 body {
     
     font-family: var(--ff-secondary);
@@ -319,6 +322,7 @@ footer p{
     display: block;
     border: none;
     z-index: 999;
+    cursor: pointer;
   
     
  }
@@ -337,6 +341,7 @@ footer p{
  }
 .menu.active{
     border-top: transparent;
+    
     
 }
 .menu.active::after{
