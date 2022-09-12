@@ -49,3 +49,38 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    width: 100%;
+    height:100%;
+    font-family: var(--ff-secondary);
+    background: var(--clr-grey-10);
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+.title{
+    text-align: center;
+    
+}
+.about-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.about-center img{
+    display: block;
+    width: 500px;
+    height: 400px;
+    background-size: contain;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px black;
+}
+@media screen  and (max-width:600px){
+    .about-center img{
+        
+        width: 400px;
+        height: 300px;
+    }
+    
+}
