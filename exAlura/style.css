@@ -7,30 +7,51 @@
 }
  html, body{
     font-family: Arial, Helvetica, sans-serif;
+    background: radial-gradient(rgb(206, 225, 217),white);
 
 
 }
 article{
+    background:  linear-gradient(to bottom, white, rgba(220, 66, 66, 0.797), white);
     display: block;
     width: 800px;
     height: 300px;
-    box-shadow: 0px 0px 15px black;
+    box-shadow: 0px 0px 15px rgba(149, 7, 0, 0.516);
     position:relative;
     top:25vh;
-
+    border-radius: 5px;
+    padding: 15px;
+    transition: .5s;
+    text-shadow: 0px 0px 15px rgb(9, 64, 242);
+   
     
    
+}
+article:hover{
+    text-shadow: 0px 0px 15px rgb(249, 25, 5);
+    box-shadow: 0px 0px 15px rgba(4, 125, 195, 0.598);
+    background:  linear-gradient(to bottom,white, rgba(24, 168, 246, 0.582), white);
+
+}
+article:active{
+    text-shadow: 0px 0px 15px rgb(118, 9, 242);
+    background:  linear-gradient(to bottom,rgb(255, 255, 255), rgb(226, 245, 19), white);
+    box-shadow: 0px 0px 15px rgba(209, 250, 5, 0.587);
+    transition: .5s;
+
 }
 body > article{ 
     
    text-align: center;
    position: relative;
    margin: auto;
-   line-height: 1.8rem;
+   line-height: 2rem;
  
 
 }
 p{
+    text-indent: 50px;
+   
     
 }
 
