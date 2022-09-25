@@ -51,7 +51,37 @@ body > article{
 }
 p{
     text-indent: 50px;
+    font-size: 1.1rem;
    
     
 }
+span{
+    display: block;
+    width:150px;
+    height: 2px;
+    background: linear-gradient(to left, rgb(255, 253, 253), rgb(248, 150, 2),  rgb(225, 82, 233), rgb(3, 15, 108));
+   position: relative;
+   margin: auto;
+   margin-bottom: 15px;
+   transition: .5s;
+   cursor: pointer;
+   
+}
 
+ span:hover{
+    width:250px;
+
+}
+#Bar{
+    transition: .5s ease;
+    cursor: pointer;
+}
+#Bar:hover{
+    font-size: 1.25rem;
+    position: relative;
+    top:-5px;
+    text-shadow:  0px 0px 15px rgb(251, 239, 5);
+    background: radial-gradient(white,rgba(231, 71, 231, 0.314));
+    border-radius: 5px;
+
+}
