@@ -7,7 +7,8 @@
 }
  html, body{
     font-family: Arial, Helvetica, sans-serif;
-    background: radial-gradient(rgb(206, 225, 217),white);
+    background: radial-gradient(rgb(195, 228, 214),white);
+
 
 
 }
@@ -84,4 +85,7 @@ span{
     background: radial-gradient(white,rgba(231, 71, 231, 0.314));
     border-radius: 5px;
 
+}
+#c:hover{
+color: red;
 }
