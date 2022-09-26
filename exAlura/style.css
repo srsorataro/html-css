@@ -22,7 +22,7 @@ article{
     background:  linear-gradient(to bottom, white, rgba(220, 66, 66, 0.797), white);
     display: block;
     width: 800px;
-    height: 300px;
+    height: 500px;
     box-shadow: 0px 0px 15px rgba(149, 7, 0, 0.516);
     position:relative;
     border-radius: 5px;
@@ -76,6 +76,7 @@ span{
 
  span:hover{
     width:250px;
+    
 
 }
 #Bar{
@@ -93,4 +94,7 @@ span{
 }
 #c:hover{
 color: red;
+}
+ul{
+    list-style-type: none;
 }
