@@ -1,0 +1,39 @@
+@media screen  and (min-width:500px ) and (max-width: 768px){
+    
+    article{
+       
+        width: 400px;
+        height: 480px;
+     
+       
+        
+       
+    }
+    
+}
+@media screen  and (min-width:768px ) and (max-width: 800px){
+   
+    article{
+       
+        width:600px;
+        height: 400px;
+     
+       
+        
+       
+    }
+    
+}
+@media screen  and (min-width: 600px) and (max-width:768px ){
+   
+    article{
+       
+        width:600px;
+        height: 400px;
+     
+       
+        
+       
+    }
+    
+}
