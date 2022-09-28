@@ -1,0 +1,51 @@
+
+
+@media screen  and (min-width:500px) and (max-width:768px){
+    button{
+        display: block;
+    }
+    nav{
+        display: none;
+    }
+    .active span{
+        z-index: 100;
+        border-top: none;
+        
+        transform: translateY(-80px);
+        
+
+    }
+    .active span::after {
+     position: relative;
+    transform: rotate(-135deg);
+    top: -8.2px;
+    transition: .5s;
+
+}
+.active span::before {
+    position: relative;
+    transform: rotate(135deg);
+    transition: .5s;
+   
+}
+    .active{
+        display:block;
+        overflow-y: hidden;
+        overflow-x: hidden;
+  
+       
+    }
+    ul{
+        display: block;
+        left:47%;
+        line-height: 2.5em;
+       
+    }
+ .active.cabeca{
+    height: 600px;
+    background: rgb(255, 255, 255);
+    scroll-behavior: smooth;
+  
+    transition: .5s;
+ }
+}
