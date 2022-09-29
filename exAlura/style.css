@@ -33,6 +33,7 @@ article{
     
    
 }
+
 article:hover{
     text-shadow: 0px 0px 15px rgb(249, 25, 5);
     box-shadow: 0px 0px 15px rgba(4, 125, 195, 0.598);
@@ -61,7 +62,7 @@ p{
    
     
 }
-span{
+ span{
     display: block;
     width:150px;
     height: 2px;
