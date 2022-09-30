@@ -16,10 +16,13 @@
 
     }
     a{
-        font-size: 1.5em;
+        font-size: 1.2em;
+    }
+    a:hover{
+        font-size: 1.5rem;
     }
     .active span::after {
-     position: relative;
+    position: relative;
     transform: rotate(-135deg);
     top: -8.2px;
     transition: .5s;
@@ -38,9 +41,10 @@
   
        
     }
-    ul{
+    .nav ul{
         display: block;
         line-height: 2.5em;
+        left:0;
        
     }
  .active.cabeca{

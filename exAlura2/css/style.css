@@ -4,6 +4,7 @@
 *{
     padding: 0;
     margin: 0;
+    border: 0;
     box-sizing:border-box;
 }
 
@@ -15,21 +16,24 @@ body{
     
 }
 header{
-    width: 100;
+    position: relative;
+    width: 100%;
     height:100px;
-    display: flex;
+    display:flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.317);
 }
-ul{
-    position: relative;
+ .nav ul {
+    position:absolute;
+    right:0;
     display: flex;
     list-style-type: none;
     
 }
 li{
     padding-right: 30px;
+    text-transform: uppercase;
 }
 a{
     text-decoration: none;
@@ -41,7 +45,7 @@ a{
 a:hover{
    
     background:white;
-    font-size: 1.15em;
+    font-size: 1.3em;
     font-weight: bolder;
     border-radius: 10px;
     color:rgb(1, 50, 114);
@@ -74,4 +78,47 @@ span::after,span::before{
     height: 2px;
     margin-top: 6px;
     background: black;
+}
+.grade{
+    position: absolute;
+    display: flex;
+    left:10rem;
+    list-style-type: none;
+   
+   
+}
+.grade  li {
+    display: block;
+    width: 300px;
+    padding-bottom: 20px;
+    margin: 10px;
+    border: 2px solid;
+    border-radius: 10px;
+    
+  
+}
+.grade li  h2{
+position: relative;
+ text-align: center;
+ left: 10%;
+
+}
+.grade p {
+    position: relative;
+    text-align: center;
+    left: 10%;
+    font-weight: bolder;
+    font-size: 0.750em;
+    font-weight: 200;
+}
+.grade img {
+    position: relative;
+    left:12%;
+  
+}
+.texto{
+    font-size: 2em;
+    text-align: center;
+    font-weight: bolder;
+   
 }
