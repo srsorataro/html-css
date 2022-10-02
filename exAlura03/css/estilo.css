@@ -1,0 +1,182 @@
+
+
+@media screen  and (min-width:500px) and (max-width:600px){
+    button{
+        display: block;
+    }
+    nav{
+        display: none;
+    }
+    .active span{
+        z-index: 100;
+        border-top: none;
+        
+        transform: translateY(-80px);
+        
+
+    }
+  
+    a{
+        font-size: 1.2em;
+    }
+    a:hover{
+        font-size: 1.5rem;
+    }
+    .active span::after {
+    position: relative;
+    transform: rotate(-135deg);
+    top: -8.2px;
+    transition: .5s;
+
+}
+.active span::before {
+    position: relative;
+    transform: rotate(135deg);
+    transition: .5s;
+   
+}
+    .active{
+        display:block;
+        overflow-y: hidden;
+        overflow-x: hidden;
+  
+       
+    }
+    .nav ul{
+        display: block;
+        line-height: 2.5em;
+        left:0;
+       
+    }
+ .active.cabeca{
+  
+    height: 500px;
+    background: rgb(255, 255, 255);
+    scroll-behavior: smooth;
+  
+    transition: .5s;
+ }
+
+ .produtos{
+
+  
+    width: 950px;
+    
+
+  
+}
+.active.produtos li{
+
+ display: none;
+    
+    
+
+}
+.produtos li {
+
+    display: block;
+    position: relative;
+    left:12%;
+    width: 25%;
+    margin-top: 15px;
+   
+    
+}
+
+.descri{
+    font-size:15px;
+}
+.produtos h2{
+    font-size: 20px;
+ 
+}
+
+.preco{
+    font-size:12px;
+    
+}
+.produtos img{
+    width: 120px;
+}
+}
+
+@media screen  and (min-width:600px) and (max-width:768px){
+    .produtos{
+
+  
+        width: 950px;
+        margin:  0 auto;
+        padding: 50px 50px 0;
+        
+       
+        
+    
+      
+    }
+    .produtos li {
+    
+        display: block;
+        position: relative;
+        left:15%;
+        width: 32%;
+        margin-top: 15px;
+       
+        
+    }
+    .descri{
+        font-size:20px;
+    }
+    .produtos h2{
+        font-size: 25px;
+     
+    }
+    
+    .preco{
+        font-size:26px;
+        
+    }
+  
+
+}
+@media screen  and (min-width:768px) and (max-width:900px){
+    .produtos{
+
+  
+        width: 900px;
+        margin:  0 auto;
+        padding: 50px 50px 0;
+        
+       
+        
+    
+      
+    }
+    .produtos li {
+        display: inline-block;
+        
+        text-align: center;
+        
+        width: 31%;
+        margin: 0px .5%;
+        padding: 5px;
+       
+        
+    }
+    .descri{
+        font-size:20px;
+    }
+    .produtos h2{
+        font-size: 25px;
+     
+    }
+    
+    .preco{
+        font-size:22px;
+        
+    }
+    .produtos img{
+        width: 100px;
+    }
+
+
+}
