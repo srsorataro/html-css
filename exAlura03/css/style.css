@@ -63,14 +63,18 @@ li{
     padding:20px;
  }
  main{
+   position: relative;
     width:940px;
     margin: 0 auto;
+    left:20%;
+    
  }
  form{
     margin:40px 0;
+  
  }
  form label{
-    display: block;
+
     font-size: 20px;
     margin: 0 0  10px;
  }
