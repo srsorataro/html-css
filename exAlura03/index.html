@@ -30,12 +30,45 @@
         <label for="nomesobrenome"> Nome e
             Sobrenome</label>
        
-        <input type="text" id="nomesobrenome">
+        <input type="text" id="nomesobrenome" class="input-produto" required placeholder="Nome de usuário">
+
         <label for="email">Email</label>
-        <input type="text" id="email">
+        <input type="email" id="email" class="input-produto" required placeholder="seu email@dominio.com">
+
         <label for="telefone">telefone</label>
-        <input type="text" id="telefone">
-        <input type="submit" value="Enviar-Formulário">
+        <input type="tel" id="telefone" class="input-produto" required placeholder="(xx)xxxxxx">
+
+        <label for="mensagem" >Mensagem</label>
+        <textarea id="mensagem" cols="61" rows="10" class="input-produto" required placeholder="opcional"></textarea>
+        <fieldset>
+            <legend>Como prefere o nosso contato?</legend>
+            <label  for="raio-email"><input type="radio" value="email" id="raio-email" name="contato" > email</label>
+        
+            <label  for="raio-telefone"><input type="radio" value="telefone" id="raio-telefone" name="contato" > telefone</label>
+        
+            <label  for="raio-whatzapp"><input type="radio" value="whatzapp" id="raio-whatzapp" name="contato" checked> whatzapp</label>
+
+        </fieldset>
+            
+               
+  
+        
+        <fieldset>
+            <legend>Qual  horário preferido ?</legend>
+            <select name="" id="">
+                <option value="" class="opcao">Manhã</option>
+                <option value="" class="opcao">Tarde</option>
+                <option value="" class="opcao">Noite</option>
+            </select>
+        </fieldset>
+
+
+            <label for="caixa"><input type="checkbox" id="caixa" class="checkbox" checked> Gostaria de receber  nossas novidades por email?</label>
+            
+            <input type="submit" value="Enviar-Formulário">
+      
+        
+      
 
     </form>
     </main>

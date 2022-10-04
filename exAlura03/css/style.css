@@ -63,24 +63,37 @@ li{
     padding:20px;
  }
  main{
-   position: relative;
+   
     width:940px;
     margin: 0 auto;
-    left:20%;
+    
     
  }
  form{
+ 
     margin:40px 0;
+    
   
  }
- form label{
+ form label, form legend{
 
+   display: block;
     font-size: 20px;
-    margin: 0 0  10px;
+    margin: 0 0  20px;
+   
+
  }
- form input{
-    display:block;
-    margin:  0 0 20px;
-    padding: 10px 25px;
-    width: 50%;
+
+ .input-produto{
+   display:block;
+   margin:  0 0 20px;
+   padding: 10px 25px;
+   width: 50%;
+
  }
+ .checkbox{
+   margin: 20px 0; 
+ }
+ fieldset{
+   border:none;
+}
