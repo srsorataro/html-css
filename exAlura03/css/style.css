@@ -97,3 +97,36 @@ li{
  fieldset{
    border:none;
 }
+.enviar{
+   width: 40%;
+   padding: 15px 0;
+   border-radius: 10px;
+   background: radial-gradient(rgb(231, 112, 8),rgba(239, 91, 6, 0.749),rgb(228, 77, 13));
+   font-weight: bolder;
+   color:white;
+   font-size: 25px;
+   box-shadow: 0px 0px 15px black;
+   transition: .2s all;
+}
+.enviar:hover{
+   background: radial-gradient(rgb(187, 89, 3),rgb(252, 106, 8),rgb(255, 79, 15));
+   transform: scale(1.08);
+
+}
+.enviar:active{
+   box-shadow:  inset 2px -5px 15px black;
+   font-size: 23px;
+}
+table{
+   padding: 20px  0 40px;
+}
+thead{
+   background: rgb(85, 85, 85);
+   color:white;
+   font-weight: bolder;
+  
+}
+td,th{
+   border: 1px solid #000;
+   padding:  8px  20px;
+}

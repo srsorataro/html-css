@@ -1,0 +1,154 @@
+header{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ background: linear-gradient(-185deg, red,white);
+}
+ul {
+display: flex;
+list-style-type: none;
+}
+ li{
+    padding-right: 30px;
+    text-transform: uppercase;
+}
+a{
+    text-decoration: none;
+    padding:5px;
+    color:#000;
+    transition:  .3s ease;
+   
+}
+a:hover{
+   
+    background:white;
+    font-size: 1.3em;
+    font-weight: bolder;
+    border-radius: 10px;
+    color:rgb(1, 50, 114);
+    box-shadow: 0px 0px 15px rgb(156, 232, 255);
+    left:calc(100% - 55px);
+
+    
+}
+.logo{
+    width: 80px;
+}
+
+#alura{
+    position: relative;
+    padding: 5px;
+    height: 120px;
+}
+
+.produtos{
+
+    width: 950px;
+    margin:  0 auto;
+    padding: 50px 50px 0;
+  
+  
+}
+.produtos li:hover h2 {
+    font-size: 30px;
+    
+}
+
+.produtos li {
+    
+    display: inline-block;
+    list-style-type: none;
+    text-align: center;
+    width: 32%;
+    vertical-align: top;
+    margin: 0px .2%;
+    border: 1px solid;
+    border-radius: 10px;
+    transition: .3s ease;
+    padding: 10px;
+    cursor: pointer;
+    border: 2px solid rgb(4, 165, 252);
+    
+}
+.produtos li:hover {
+    border-radius: 20px 0px 20px ;
+
+    border: 2px solid rgb(216, 166, 4);
+    box-shadow:  0 0 12px rgba(254, 188, 5, 0.695);
+   
+}
+.produtos li:active{
+    border: 2px solid rgb(245, 0, 0);
+    box-shadow:  0 0 12px rgba(253, 64, 2, 0.861);
+
+}
+.descri{
+    font-size: 17px;
+}
+.produtos{
+    font-size: 25px;
+    
+}
+.item{
+    text-transform: none;
+
+}
+
+.preco{
+    font-size:22px;
+    margin:  10px 0 0 ;
+}
+footer{
+    padding:40px 0 0 ;
+    text-align: center;
+    background:url('../image/bg.jpg');
+    
+    
+}
+.cop{
+    color:white;
+    font-size: 13px;
+    margin:20px 0 0;
+  
+
+}
+
+.im{
+    width: 100px;
+}
+
+/* pagina inicial*/
+.banner{
+    width: 100%;
+
+}
+.container{
+ 
+}
+.center{
+    display: block;
+}
+section{
+    width: 1000px;
+    transform: translateX(100px);
+}
+.titulo-center{
+    text-align: center;
+    font-size: 2em;
+    margin:  0 0 1em;
+    font-weight: normal;
+
+}
+.principal p {
+    margin:  0 0 1em;
+
+}
+.principal strong{
+    font-weight: bold;
+}
+.principal em{
+    font-style: italic;
+}
+.beneficios{
+    width:60%;
+}
