@@ -167,6 +167,15 @@ section{
     width:60%;
    
 }
+.principal{
+    padding: 3em 0;
+    background: linear-gradient(to bottom, #fefefe,rgb(116, 115, 115));
+    box-shadow:  0 0 15px black;
+}
+main{
+    background: linear-gradient(to bottom, #fefefe,rgb(180, 180, 180));
+
+}
 .conteudo-beneficios{
     width:640px;
     margin: 0 auto;
