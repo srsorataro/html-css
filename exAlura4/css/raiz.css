@@ -23,7 +23,63 @@ body{
     width: 100vw;
     height: 100vh;
     font-family: "Montserrat", sans-serif;
+    background: #ffffff;
     
     
 }
+
+@media screen  and (min-width:500px) and (max-width:600px){
+    .c{
+        position: relative;
+        
+        transform: translateX(-80px);
+        width: 440px;
+    
+    }
+    .botao{
+        display: block;
+    }
+  .nav{
+    display: none;
+  }
+  .botao.active{
+    border-top: none;
+   position: absolute;
+   top:3rem;
+
+   
+  }
+  .botao.active::after{
+    position: relative;
+    transform: rotate(138deg);
+    top:-7px;
+    transition: .5s;
+
+  }
+  .botao.active::before{
+    position: relative;
+    transform: rotate(225deg);
+    transition: .5s;
+
+  }
+
+  .active{
+    display: block;
+    
+  }
+  ul{
+    display: block;
+  }
+  header.active{
+    transition: .5s;
+    padding-bottom: 50px;
+    overflow-y: hidden;
+    
+  }
+  li{
+    padding: 40px 0 0 ;
+  }
+}
+
+
 

@@ -36,6 +36,13 @@ a:hover{
 
     
 }
+main{
+    position: relative;
+    width: 1200px;
+    margin: auto;
+  
+    
+}
 .logo{
     width: 80px;
 }
@@ -43,6 +50,7 @@ a:hover{
     width:40%;
     display: inline-block;
     vertical-align: top;
+    
 }
 #alura{
     position: relative;
@@ -52,8 +60,7 @@ a:hover{
 
 .produtos{
 
-    width: 950px;
-    margin:  0 auto;
+  
     padding: 50px 50px 0;
   
   
@@ -137,21 +144,24 @@ footer{
 }
 
 
-section{
-    width: 1000px;
-    transform: translateX(100px);
-}
+
 .titulo-center{
-     text-align: center;
+   
+    text-align: center;
     font-size: 2em;
     margin:  0 0 1em;
     font-weight: normal;
-    clear: left;
+    transform: translateX(-2rem);
+   
+    
+     
+    
  
 
 }
 .principal p {
     margin:  0 0 1em;
+    font-size: .950em;
     
     
 
@@ -165,17 +175,16 @@ section{
 }
 .beneficios{
     width:60%;
-   
+    transform: translateX(2rem);
+ 
 }
 .principal{
     padding: 3em 0;
-    background: linear-gradient(to bottom, #fefefe,rgb(116, 115, 115));
-    box-shadow:  0 0 15px black;
+    width: 940px;
+    margin:  0 auto;
+   
 }
-main{
-    background: linear-gradient(to bottom, #fefefe,rgb(180, 180, 180));
 
-}
 .conteudo-beneficios{
     width:640px;
     margin: 0 auto;
@@ -184,8 +193,9 @@ main{
 }
 .utensilios{
  float: left;
- width:120px;
+ width:calc(40% - 160px);
  margin:  0 20px 20px 0 ;
+ box-shadow:  0 0 8px black;
 
 }
 .botao{
@@ -208,11 +218,18 @@ main{
 }
 .mapa{
     padding:  3em 0 0;
+    background: linear-gradient(white,#8888);
     
     
 }
+.mapa-conteudo{
+ width: 940px;
+ margin: 0 auto;
+}
 .q{
-    padding:3em 3rem 0; 
+    padding:3em 10rem 0; 
+    background: #8888;
+   
 }
 .mapa p {
     text-align: center;
@@ -221,55 +238,20 @@ main{
   
 
 }
+
+.item::before{
+    content: '🎇';
+}
+
 .c{
     position: relative;
     margin:1em auto;
-    transform: translateX(180px);
+    transform: translateX(15rem);
     width: 540px;
-
-@media screen  and (min-width:500px) and (max-width:600px){
-    .botao{
-        display: block;
-    }
-  .nav{
-    display: none;
-  }
-  .botao.active{
-    border-top: none;
-   position: absolute;
-   top:3rem;
-
    
-  }
-  .botao.active::after{
-    position: relative;
-    transform: rotate(138deg);
-    top:-7px;
-    transition: .5s;
 
-  }
-  .botao.active::before{
-    position: relative;
-    transform: rotate(225deg);
-    transition: .5s;
-
-  }
-
-  .active{
-    display: block;
-    
-  }
-  ul{
-    display: block;
-  }
-  header.active{
-    transition: .5s;
-    padding-bottom: 50px;
-    overflow-y: hidden;
-    
-  }
-  li{
-    padding: 40px 0 0 ;
-  }
 }
+main{
+   
+width: 100%;
 }
