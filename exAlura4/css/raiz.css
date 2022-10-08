@@ -70,6 +70,9 @@ body{
   ul{
     display: block;
   }
+  header{
+    width: auto;
+  }
   header.active{
     transition: .5s;
     padding-bottom: 50px;
@@ -79,7 +82,178 @@ body{
   li{
     padding: 40px 0 0 ;
   }
+  .principal{
+    width: 90%;
+  
+
+  }
+  .principal p{
+    font-size: .875em;
+    line-height: 2;
+  }
+  .titulo-center{
+    font-size: 1.5em;
+    padding:  0 0 0 15% ;
+    
+  }
+  .utensilios{
+   width: 20%;
+  }
+  .mapa{
+    
+    width: 97.3%;
+    background-color: blueviolet;
+    transform: translateX(4px);
+  
+  }
+ #text-center p {
+  transform: translateX(-20px);
+  font-size: .875em;
+ }
+ .mapa-conteudo{
+  width: 97.6%;
+  transform: translateX(-2.8px);
+ }
+ .q{
+  width: 100%;
+  
+  
+ }
+ .item{
+  font-size: .875em;
+  padding:0;
+  transform:translateX(-10em);
+ }
+ .beneficios{
+  transform:translateX(-12em);
+  width: 38%;
+
+
+ }
+ .c{
+  width: 350px;
+  height:300px;
+ }
 }
+
+@media screen  and (min-width:600px) and (max-width:769px){
+
+  
+.principal{
+  width: 90%;
+
+
+}
+.principal p{
+  font-size: .875em;
+  line-height: 2;
+}
+.titulo-center{
+  font-size: 1.5em;
+  padding:  0 0 0 15% ;
+  
+}
+.utensilios{
+ width: 20%;
+}
+.mapa{
+  
+  width: 97.3%;
+  background-color: blueviolet;
+  transform: translateX(4px);
+
+}
+#text-center p {
+transform: translateX(-20px);
+font-size: .875em;
+}
+.mapa-conteudo{
+width: 97.6%;
+transform: translateX(-2.8px);
+}
+.q{
+width: 100%;
+
+
+}
+.item{
+font-size: .875em;
+padding:0;
+transform:translateX(-10em);
+}
+.beneficios{
+transform:translateX(-12em);
+width: 38%;
+
+
+}
+.c{
+width: 350px;
+height:300px;
+transform:translateX(3em);
+}
+}
+
+@media screen  and (min-width:800px) and (max-width:900px){
+  
+  .principal{
+    width: 90%;
+  
+  
+  }
+  .principal p{
+    font-size: .875em;
+    line-height: 2;
+  }
+  .titulo-center{
+    font-size: 1.5em;
+    padding:  0 0 0 15% ;
+    
+  }
+  .utensilios{
+   width: 20%;
+  }
+  .mapa{
+    
+    width: 97.3%;
+    background-color: blueviolet;
+    transform: translateX(4px);
+  
+  }
+  #text-center p {
+  transform: translateX(-20px);
+  font-size: .875em;
+  }
+  .mapa-conteudo{
+  width: 97.6%;
+  transform: translateX(-2.8px);
+  }
+  .q{
+  width: 100%;
+ 
+  
+  }
+  .item{
+  font-size: .875em;
+  padding:0;
+  transform:translateX(-10em);
+  }
+  .beneficios{
+  transform:translateX(-12em);
+  width: 38%;
+  
+  
+  }
+  .c{
+  width: 350px;
+  height:300px;
+  transform:translateX(3em);
+
+  }
+  }
+  
+
+
 
 
 
