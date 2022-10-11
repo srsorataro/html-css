@@ -82,6 +82,8 @@ input[type=button]:active{
     font-weight: bold;
 }
 
+  
+
 
 input[type=tel]{
     background: var(--degrade2);
