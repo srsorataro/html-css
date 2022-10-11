@@ -54,8 +54,10 @@ h1:hover{
     background: var(--degrade2);
     border-radius: 30px;
     padding: 10px;
+    box-shadow: 5px 4px  2px 5px rgba(27, 26, 26, 0.668);
    
 }
+
 input[type=button]{
     border-radius: 20px;
     cursor: pointer;
@@ -91,6 +93,7 @@ input[type=tel]{
     padding: 10px;
     text-align: center;
     width: 280px;
+    box-shadow: 2px  5px 5px black;
    
 
 }
