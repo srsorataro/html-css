@@ -18,12 +18,20 @@ for(let i = 0; i < teclasList.length; i++){
     tecla.onclick  = () =>{
         tocaS(idDio);
     }
-    tecla.onkeydown = function (){   
-        tecla.classList.add('ativa');
+    tecla.onkeydown = function (e){   
+        if(e.code === "Enter"){
+            tecla.classList.add('toque');
+
+        }
+      
        
     }
-    tecla.onkeyup = function () {
-        tecla.classList.remove('ativa')
+    tecla.onkeyup = function (e) {
+        if(e.code === "Space"){
+            tecla.classList.remove('toque')
+
+        }
+      
 
     }
     

@@ -1,23 +1,31 @@
-const buto  = document.querySelectorAll('input[type=button]');
-const tel = document.querySelector('input[type=tel]');
-const clear = document.querySelector('#clear');
+const tecla = document.querySelectorAll('input[type=button]');
+const tel  =  document.querySelector('input[type=tel]');
 
-    for(let i = 0; i < buto.length; i++){
-        buto[i].onclick = () =>{
-            tel.value += buto[i].value
+for(let i = 0;  i < tecla.length; i++){
+    const teq = tecla[i];
+    tecla[i].onclick = () =>{
+        tel.value += tecla[i].value
+
+
+        teq.onkeydown = function(evento){
+            if(evento.code === "Enter" ){
+                teq.classList.add('ativa')
+                
+            
     
-        }
-        buto.onkeydown  = function (e){
-            if(e.code === "Space"){
-                buto[i].classList.add('ativa')
             }
-        }
-        buto.onkeydown  = function (e){
-            if(e.code === "Space"){
-                buto[i].classList.remove('ativa')
+            teq.onkeyup = function(evento){
+                if(evento.code === "Space"){
+                    teq.classList.remove('ativa')
+    
+                }
+               
             }
         }
     }
 
-
-
+    
+  
+    
+  
+}
