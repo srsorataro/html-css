@@ -1,6 +1,14 @@
 const teclasList = document.querySelectorAll('.tecla');
 function tocaS(son){
-    document.querySelector(son).play()
+    const elemento = document.querySelector(son)
+         
+    if(elemento  && elemento.localName === 'audio'){
+            elemento.play();
+        } 
+    else{
+        alert('Deu Ruim!!')
+
+    }   
 }
 
 /*const adio  =  document.querySelectorAll('audio');
@@ -19,15 +27,14 @@ for(let i = 0; i < teclasList.length; i++){
         tocaS(idDio);
     }
     tecla.onkeydown = function (e){   
-        if(e.code === "Enter"){
+        if(e.code === "Space"){
             tecla.classList.add('toque');
 
         }
-      
-       
+   
     }
     tecla.onkeyup = function (e) {
-        if(e.code === "Space"){
+        if(e.code === "Enter"){
             tecla.classList.remove('toque')
 
         }
