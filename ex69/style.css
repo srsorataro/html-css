@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-shadow: 0;
+    border: 0;
+}
+body{
+   background: linear-gradient(90deg, blue, yellow);
+}
+a{
+    color:rgb(6, 24, 116);
+    text-decoration: none;
+    font-size: 22px;
+}
+main{
+ 
+    height: 80px;
+    background: white;
+   
+}
+li{
+    margin-right: 15px;
+}
+ul{
+    display: flex;
+    list-style-type: none;
+    margin-right: 15px;
+    align-items: center;
+    
+}
+.botao{
+  display: block;
+  border-top: 2px solid;
+  width: 30px;
+ 
+
+}
+.botao::after,.botao::before{
+    display: block;
+    content: '';
+    margin-top: 4px;
+    height: 2px;
+    background-color: black;
+
+}
