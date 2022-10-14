@@ -4,45 +4,57 @@
 *{
     padding: 0;
     margin: 0;
-    box-shadow: 0;
+    box-sizing: border-box;
     border: 0;
 }
 body{
-   background: linear-gradient(90deg, blue, yellow);
+    font-family: Arial, Helvetica, sans-serif;
 }
-a{
-    color:rgb(6, 24, 116);
-    text-decoration: none;
-    font-size: 22px;
-}
+
 main{
- 
     height: 80px;
-    background: white;
-   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(25deg, rgb(242, 248, 253),rgb(158, 238, 232),rgb(44, 198, 254), rgb(94, 204, 251));
+}
+.menu{
+     display: flex;
+     list-style-type: none;
 }
 li{
-    margin-right: 15px;
+    margin-right: 2rem;
+   
+    border-radius: 5px;
 }
-ul{
-    display: flex;
-    list-style-type: none;
-    margin-right: 15px;
-    align-items: center;
-    
+a{
+    font-size: 22px;
+    text-decoration: none;
+    color:white;
+    cursor: pointer;
+}
+a:hover{
+    padding: 0 10px 0 10px ;
+    background: rgb(3, 73, 111);
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow:  2px 1px 5px 1px black;
+
+
 }
 .botao{
-  display: block;
-  border-top: 2px solid;
-  width: 30px;
- 
-
+    display: block;
+    border-top: 2px solid;
+    width:30px;
+    margin:  auto;
+   background: transparent;
+   
+  
 }
 .botao::after,.botao::before{
     display: block;
     content: '';
-    margin-top: 4px;
     height: 2px;
-    background-color: black;
-
+    margin-top: 6px;
+    background: black;
 }
