@@ -1,26 +1,15 @@
-let tela  = document.querySelector('canvas');
-let pincel = tela.getContext('2d');
+let  tela = document.querySelector("canvas");
+let  pincel  = tela.getContext("2d");
 
-pincel.fillStyle='green';
-pincel.fillRect(0, 0, 600, 400);
+let xQ = [0,50,100];
 
-pincel.fillStyle='yellow';
-pincel.beginPath();
-pincel.moveTo(300, 50);
-pincel.lineTo(50, 200);
-pincel.lineTo(550, 200);
-pincel.fill();
+pincel.fillStyle ="green";
+pincel.fillRect(0,0,50,50);
+pincel.fillStroke ='black';
+pincel.strokeRect(0,0,50,50);
 
-pincel.beginPath();
-pincel.moveTo(300, 350);
-pincel.lineTo(50, 200);
-pincel.lineTo(550, 200);
-pincel.fill();
+pincel.fillRect(50,0,50,50);
+pincel.strokeRect(50,0,50,50);
 
-pincel.fillStyle='darkblue';
-pincel.beginPath();
-
-pincel.arc(300, 200, 100, 0, 2*3.14);
-pincel.fill();
-pincel.fillStyle='white';
-pincel.fillRect(200, 190, 200, 20);
+pincel.fillRect(100,0,50,50);
+pincel.strokeRect(100,0,50,50);
