@@ -1,15 +1,23 @@
-let  tela = document.querySelector("canvas");
-let  pincel  = tela.getContext("2d");
+let tela = document.querySelector('canvas');
+let pincel = tela.getContext('2d');
 
-let xQ = [0,50,100];
 
-pincel.fillStyle ="green";
-pincel.fillRect(0,0,50,50);
-pincel.fillStroke ='black';
-pincel.strokeRect(0,0,50,50);
+pincel.fillStyle = "lightgray"
+pincel.fillRect(0,0,600,400);
 
-pincel.fillRect(50,0,50,50);
-pincel.strokeRect(50,0,50,50);
+function circulo(x,y,raio,cor){
+    pincel.fillStyle = cor;
+    pincel.beginPath();
+    pincel.arc(x,y,raio,0,2* Math.PI);
+    pincel.fill();
+}
+function Flor(x,y){
+    circulo(x,y+20,10,"yellow");
+    circulo(x,y,10,"red");
+    circulo(x,y-20,10,"yellow");
+    circulo(x+20,y,10,"yellow");
+    circulo(x-20,y,10,"yellow");
 
-pincel.fillRect(100,0,50,50);
-pincel.strokeRect(100,0,50,50);
+
+}
+Flor(300,200);
