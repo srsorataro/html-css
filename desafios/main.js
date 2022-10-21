@@ -16,8 +16,3 @@ if(!acertou){
     "`)
 }*/
 
-function somar(somar1,somar2){
-    resultado = somar1 + somar2
-    console.log(resultado)
-}
-somar(100,110);
