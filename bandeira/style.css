@@ -1,0 +1,11 @@
+
+
+canvas{
+    display: flex;
+    width: 600px;
+    height: 400px;
+    margin: auto;
+    position: relative;
+    top:100px;
+    box-shadow:  0 0 15px black;
+}
