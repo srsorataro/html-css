@@ -3,7 +3,9 @@
     display:flex;
     justify-content: space-between;
 }
-
+.cabecalhoPrincipal-nav-link-app{
+    order: -1;
+}
 .cabecalhoPrincipal-nav{
     display: flex;
     
@@ -56,7 +58,7 @@
 }
 .conteudoPrincipal-cursos-link{
     width: 25%;
-    he
+
     
     
     
