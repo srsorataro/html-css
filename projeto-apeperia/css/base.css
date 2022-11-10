@@ -9,15 +9,16 @@
     
 --fonte-link: #0084FF;
 --fonte-cinza: #666;
---borda-cabecalho-mobile: #103D4A;
+--borda-cabecalho-mobile:#103D4A;
 --bg-rodape: #333;
---bg-chamada-mobile: #00161C;
+--bg-chamada-mobile:#00161C;
 
---planos-cartao-start: #56CCF2;
---planos-cartao-ultra: #B04CD9;
---planos-cartao-mega: #E33B3B;
-    
+--planos-cartao-start:#56CCF2;
+--planos-cartao-ultra:#B04CD9;
+--planos-cartao-mega:#E33B3B;
 
+--montserrat:'Montserrat', serif;
+--opensans:'Open Sans', sans-serif;
 }
 body{
     font-family: 'Open Sans', sans-serif;
@@ -33,9 +34,7 @@ body{
     max-width:350px;
     box-sizing: border-box;
     padding: 1rem 2rem;
-    border: 1px solid rgb(182, 182, 182);
+    border: 1px solid var(--branco);
     border-radius: 5px;
 }
-.botao:hover{
-    border: 1px solid #fffdfd;
-}
+
