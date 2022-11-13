@@ -15,8 +15,9 @@
 }
 
 .sobre__texto {
+    
     line-height: normal;
-
+    margin-left: 1rem;
     margin-bottom: 1rem;
 }
 
@@ -32,3 +33,7 @@
 
     margin-bottom: 1rem;
 }
+.sobre__conteudo{
+ 
+}
+
