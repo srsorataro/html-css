@@ -8,11 +8,31 @@
     <link href="./assets/css/normalize.css" rel="stylesheet">
     <link href="./assets/css/reset.css" rel="stylesheet">
     <link href="./assets/css/style.css" rel="stylesheet">
+    <link href="./assets/css/menu.css" rel="stylesheet">
     <link href="./assets/css/destaque.css" rel="stylesheet">
     <link href="./assets/css/populares.css" rel="stylesheet">
+    <link href="./assets/css/responsivo.css" rel="stylesheet">
 </head>
 <body class="app">
-    <header class="cabecalho">Cabeçalho</header>
+    <header class="cabecalho">
+        <nav class="menu">
+            <ul class="menu__lista">
+                <li class="menu__item">
+                    <a class="menu__link ativo" href="#">
+                        <i class="fas fa-home"></i>
+                        Início
+                    </a>
+                    <a class="menu__link" href="#">
+                        <i class="fas fa-mobile-alt"></i>
+                        Aplicativos</a>
+                    <a class="menu__link" href="#">
+                        <i class="fas fa-gamepad"></i>
+                        Jogos
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
     <main class="conteudo">
         <section class="destaques">
             <div class="destaques__principal caixa">
@@ -193,7 +213,7 @@
                         <img class="populares__card___imagem" src="./assets/img/lol.jpg">
                         <div class="populares__card___corpo">
                             <div class="populares__card___cabecalho">
-                                <h5 class="populares__card___titulo">League of Legends</h5>
+                                <h5 class="populares__card___titulo">League of Le...</h5>
                                 <time class="populares__card___data" datetime="2009-10-27">27/10/2009</time>
                             </div>
                             <div class="populares__card___descricao">
@@ -205,7 +225,7 @@
                         <img class="populares__card___imagem" src="./assets/img/gta-v.jpg">
                         <div class="populares__card___corpo">
                             <div class="populares__card___cabecalho">
-                                <h5 class="populares__card___titulo">Grand Theft Auto V</h5>
+                                <h5 class="populares__card___titulo">GTA V</h5>
                                 <time class="populares__card___data" datetime="2013-09-17">17/09/2013</time>
                             </div>
                             <div class="populares__card___descricao">
@@ -233,7 +253,7 @@
                         <img class="populares__card___imagem" src="./assets/img/fortnite.jpg">
                         <div class="populares__card___corpo">
                             <div class="populares__card___cabecalho">
-                                <h5 class="populares__card___titulo">Fornite</h5>
+                                <h5 class="populares__card___titulo">Fortnite</h5>
                                 <time class="populares__card___data" datetime="2017-07-25">25/07/2017</time>
                             </div>
                             <div class="populares__card___descricao">
@@ -357,7 +377,7 @@
                         <img class="populares__card___imagem" src="./assets/img/mario-kart.jpg"> 
                         <div class="populares__card___corpo">
                             <div class="populares__card___cabecalho">
-                                <h5 class="populares__card___titulo">Super Mario Racing</h5>
+                                <h5 class="populares__card___titulo">Super Mario...</h5>
                                 <time class="populares__card___data" datetime="">Não definida</time>
                             </div>
                             <div class="populares__card___descricao">
@@ -371,7 +391,7 @@
 
         
     </main>
-    <footer class="rodape">Rodapé</footer>
+    <footer class="rodape">Todos os direitos reservados &copy;2019</footer>
     <script src="./assets/js/fontawesome.all.min.js"></script>
 </body>
 </html>
