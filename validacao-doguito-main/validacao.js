@@ -4,59 +4,54 @@ export function valida(input) {
     if(validadores[tipoDeInput]) {
         validadores[tipoDeInput](input)
     }
-    if(input.validity.valid){
-        input.parentElement.classList.remove('input-container--invalido')
-        input.parentElement.querySelector('.input-mensagem-erro').innerHTML = MostraMensagemDeError(tipoDeInput,input)
-    }else{
-        input.parentElement.classList.add('input-container--invalido')
-    }
-   
-      
 
-    
+    if(input.validity.valid) {
+        input.parentElement.classList.remove('input-container--invalido')
+        input.parentElement.querySelector('.input-mensagem-erro').innerHTML = ''
+    } else {
+        input.parentElement.classList.add('input-container--invalido')
+        input.parentElement.querySelector('.input-mensagem-erro').innerHTML = mostraMensagemDeErro(tipoDeInput, input)
+    }
 }
-const tiposDeErro =[
+
+const tiposDeErro = [
     'valueMissing',
     'typeMismatch',
     'patternMismatch',
     'customError'
 ]
-const mensagemDeErro = {
-    nome:{
-        valueMissing: 'O campo não pode está vazio.'
 
+const mensagensDeErro = {
+    nome: {
+        valueMissing: 'O campo de nome não pode estar vazio.'
     },
-    email:{
-        valueMissing: 'O campo não pode está vazio.',
-        typeMismatch: 'O email  digitado não  é válido.'
-
+    email: {
+        valueMissing: 'O campo de email não pode estar vazio.',
+        typeMismatch: 'O email digitado não é válido.'
     },
-    senha:{
-        valueMissing: 'O campo  de senha não pode está vazio.',
-        patternMismatch: 'A senha deve conter a 6 a 12 carecteres ter uma letra maiuscula um numero e não de conter simbolos.'
-
+    senha: {
+        valueMissing: 'O campo de senha não pode estar vazio.',
+        patternMismatch: 'A senha deve conter entre 6 a 12 caracteres, deve conter pelo menos uma letra maiúscula, um número e não deve conter símbolos.'
     },
-    dataNascimento:{
-        valueMissing: 'O campo  não pode está vazio.',
+    dataNascimento: {
+        valueMissing: 'O campo de data de nascimento não pode estar vazio.',
         customError: 'Você deve ser maior que 18 anos para se cadastrar.'
-
     }
 }
-  
 
 const validadores = {
     dataNascimento:input => validaDataNascimento(input)
 }
-function MostraMensagemDeError(tipoDeInput,input){
-    let mensagem =''
-    tiposDeErro.forEach(erro => {
-        if(input.validity[erro]){
-            mensagem = mensagemDeErro[tipoDeInput][erro]
 
+function mostraMensagemDeErro(tipoDeInput, input) {
+    let mensagem = ''
+    tiposDeErro.forEach(erro => {
+        if(input.validity[erro]) {
+            mensagem = mensagensDeErro[tipoDeInput][erro]
         }
-        return mensagem
-        
-    });
+    })
+    
+    return mensagem
 }
 
 function validaDataNascimento(input) {
@@ -75,4 +70,35 @@ function maiorQue18(data) {
     const dataMais18 = new Date(data.getUTCFullYear() + 18, data.getUTCMonth(), data.getUTCDate())
 
     return dataMais18 <= dataAtual
+}
+function validaCPF(input){
+    const cpfFormatado = input.value.replace(/\D/g,'')
+    let mensagem =''
+    if(checarCPFRepitido(cpfFormatado)){
+        mensagem = 'O CPF digitado não é valido.'
+
+    }
+    input.setCustomValidity(mensagem)
+}
+function checarCPFRepitido(cpf){
+    const valoresRepitidos =[
+        '00000000000',
+        '11111111111',
+        '22222222222',
+        '33333333333',
+        '44444444444',
+        '55555555555',
+        '66666666666',
+        '77777777777',
+        '88888888888',
+        '99999999999'
+    ]
+    let cpfValido = true
+    valoresRepitidos.forEach(valor => {
+        if(valor == cpf){
+            cpfValido = false
+        }
+    })
+    return cpfValido
+
 }
