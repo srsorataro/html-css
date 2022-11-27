@@ -113,9 +113,17 @@ function checaEstruturaCPF(cpf){
 
     return checaDigitoVerificador(cpf,multiplicador)
 }
+function checaDigitoVerificador(cpf,multiplicador){
+    let soma = 0
+    const  cpfSemDigitos = cpf.substr(0,multiplicador - 1).split('')
+    const DigitoVerificador = cpf.charArt(multiplicador - 1)
+    for(let contador = 0; multiplicador > 1; multiplicador --  )
+}
 function confirmaDigito(soma){
     return 11 - (soma % 11)
 }
+
+
 //let soma  = (10*1)+(9*2)+(8*3)+(7*4)+(6*5)+(5*6)+(4*7)+(3*8)+(2*9)
 //let soma1  = (11*1)+(10*2)+(9*3)+(8*4)+(7*5)+(6*6)+(5*7)+(4*8)+(3*9)+(2*0)
 //let digitoVerificador =  11 - (soma % 11)
