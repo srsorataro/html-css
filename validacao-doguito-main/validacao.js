@@ -36,11 +36,17 @@ const mensagensDeErro = {
     dataNascimento: {
         valueMissing: 'O campo de data de nascimento não pode estar vazio.',
         customError: 'Você deve ser maior que 18 anos para se cadastrar.'
+    },
+    cpf:{
+        valueMissing: 'O campo de cpf  não pode estar vazio.',
+        customError: 'CPF inválido!☹'
+
     }
 }
 
 const validadores = {
-    dataNascimento:input => validaDataNascimento(input)
+    dataNascimento:input => validaDataNascimento(input),
+    cpf:input => validaCPF(input)
 }
 
 function mostraMensagemDeErro(tipoDeInput, input) {
@@ -74,7 +80,7 @@ function maiorQue18(data) {
 function validaCPF(input){
     const cpfFormatado = input.value.replace(/\D/g,'')
     let mensagem =''
-    if(checarCPFRepitido(cpfFormatado)){
+    if(!checarCPFRepitido(cpfFormatado)){
         mensagem = 'O CPF digitado não é valido.'
 
     }
@@ -102,3 +108,14 @@ function checarCPFRepitido(cpf){
     return cpfValido
 
 }
+function checaEstruturaCPF(cpf){
+    const multiplicador = 10
+
+    return checaDigitoVerificador(cpf,multiplicador)
+}
+function confirmaDigito(soma){
+    return 11 - (soma % 11)
+}
+//let soma  = (10*1)+(9*2)+(8*3)+(7*4)+(6*5)+(5*6)+(4*7)+(3*8)+(2*9)
+//let soma1  = (11*1)+(10*2)+(9*3)+(8*4)+(7*5)+(6*6)+(5*7)+(4*8)+(3*9)+(2*0)
+//let digitoVerificador =  11 - (soma % 11)
