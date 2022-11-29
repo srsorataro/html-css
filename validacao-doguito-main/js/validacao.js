@@ -62,6 +62,9 @@ const mensagensDeErro = {
         valueMissing: 'O campo de estado  não pode estar vazio.',
         patternMismatch: 'estado inválido!☹'
 
+    },
+    preco:{  valueMissing: 'O campo de preco  não pode estar vazio.'
+        
     }
 }
 
