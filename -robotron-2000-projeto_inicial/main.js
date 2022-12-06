@@ -1,22 +1,25 @@
-const subtrair = document.querySelector('#subtrair') 
-const somar = document.querySelector('#somar')
-const braco = document.querySelector('#braco') 
-somar.addEventListener('click', () =>{   
-    manipulaDados('somar')
-})
-subtrair.addEventListener('click', () =>{   
-    manipulaDados('subtrair')
+
+const controle  = document.querySelectorAll('.controle-ajuste')
+
+controle.forEach((elemento) =>{
+    elemento.addEventListener('click',(evento)=>{
+        manipulaDados(evento.target.dataset.controle, evento.target.parentNode)
+       
+      
+    })
+   
 })
 
-
-function manipulaDados(operacao){
-    if(operacao === 'subtrair'  ){
-            braco.value--
-        }else{
-            braco.value++
-        }
+function manipulaDados(operacao,controle){
+    const peca = controle.querySelector('[data-contador]')
+    
+ 
+   
+    if(operacao === '-' ){
+            peca.value--
         
-    
-    
+        }else{
+            peca.value++
+        }    
 }
 
