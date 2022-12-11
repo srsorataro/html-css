@@ -37,7 +37,7 @@ const pecas = {
 
 const controle  = document.querySelectorAll('.controle-ajuste')
 
-const estatiticas  = document.querySelectorAll('[data-estatiticas]')
+
 
 
 controle.forEach((elemento) =>{
@@ -62,14 +62,17 @@ function manipulaDados(operacao,controle){
             peca.value++
         }    
 }
-function atualizaDados(peca){
+function atualizaDados(peca,operecao){
+    
+
+    const estatiticas  = document.querySelectorAll('[data-estatiticas]')
     
     estatiticas.forEach((elemento)=>{
-        if(estatiticas === '+'){  
+        if(operecao === '+'){  
             ( elemento.textContent  = parseInt(elemento.textContent) + pecas[peca][elemento.dataset.estatiticas])
 
 
-        }else{
+        }else if(operecao === '-'){
             ( elemento.textContent  = parseInt(elemento.textContent) -  pecas[peca][elemento.dataset.estatiticas])
 
         }
