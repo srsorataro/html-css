@@ -1,24 +1,17 @@
 
 const lista  = document.querySelectorAll('li[data-tinta]')
 const mostraTintas = document.querySelector('[data-mostrar]');
-const recolheTintas = document.querySelector('[data-recolher]');
 
 
-
-mostraTintas.addEventListener('click', () =>{
-  
-    lista.forEach(function(element){
+mostraTintas.addEventListener('click',()=>{
+    for(let i = 0; i < lista.length; i++){
+        return lista[i]
+       }
+    
+    
       
-          element.style.display ='block'
-       
-    })
-
 
 })
-
-
-
-
   
 
 
