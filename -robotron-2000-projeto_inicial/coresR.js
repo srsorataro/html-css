@@ -1,18 +1,16 @@
 const cores = ['Amarelo','Azul','Branco','Preto','Rosa','Vermelho']
-const dataC = document.querySelector('[data-cor]')
-const dataR = document.querySelector('[data-robo]')
-let contador = 1 
+const corAtual = document.querySelector('[data-cor]');
+const btnAlterarCor = document.querySelector('[data-botao]');
+let i = -1;
 
-dataC.addEventListener('click',() =>{
-    if(i>=(cores.length) -1){
-        i = - 1
 
+btnAlterarCor.addEventListener("click", () =>{
+    if(i >= (cores.length  -1 )){
+        i -= i
     }
-    i++
-    dataC.setAttribute('src',`./img/Robotron 2000 -${cores[i]}/Robotron 2000 - ${cores[i]}.png`)
-  
+    i++;    
+    corAtual.setAttribute('src',`./img/Robotron 2000 - ${cores[i]}.png`)    
 })
-
 
 
 
