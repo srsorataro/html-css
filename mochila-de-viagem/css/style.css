@@ -130,26 +130,3 @@ html {
     font-weight: 400;
 }
 
-
-@media screen  and (max-width:600px){
-
-  .conteudo {
-    display: block;
-  
-  }
-  .conteudo .principal{
-    display: block;
- 
-    min-width: 400px;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 5px;
-  }
-  .lista{
-    margin: auto;
-    
-  }
-  .item strong{
-    text-align: center;
-  }
-}
