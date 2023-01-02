@@ -17,12 +17,20 @@ form.addEventListener('submit',(evento) =>{
     evento.preventDefault()
     const nome = evento.target.elements['nome']
     const quantidade = evento.target.elements['quantidade']
-    
-   
+
+
+    const exite = itens.find(e => e.nome === nome.value)
     const itemAtual = {
         "nome": nome.value,
         "quantidade": quantidade.value
     }
+    if(exite){
+        itemAtual.id
+
+    }
+    
+   
+  
     criarElemento(itemAtual)
     itens.push(itemAtual)
     localStorage.setItem("itens",JSON.stringify(itens))
