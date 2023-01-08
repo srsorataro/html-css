@@ -29,11 +29,11 @@ if(exite){
    
     itemAtual.id = exite.id
     atualizaElemento(itemAtual)
-    itens[exite.id] = itemAtual
+    itens[itens.findIndex(e => e.id === exite.id)] = itemAtual
    
 
 }else{
-    itemAtual.id = itens.length 
+    itemAtual.id =itens[itens.length -1 ]  ?(itens[itens.length-1].id + 1) : 0
     itens.push(itemAtual)
     criarElemento(itemAtual)
 
