@@ -6,6 +6,7 @@ function pularLinha(){
 function mostrar(frase){
     document.write(frase)
     pularLinha()
+   
 
 }
 
@@ -14,13 +15,12 @@ function calcularImc(peso, altura){
  
    
 }
-let imcFlavio = calcularImc(60,1.80)
-let imcRoberta = calcularImc(55,1.65)
-let total  = imcFlavio + imcRoberta
-  
-mostrar(imcFlavio)
- 
-mostrar(imcRoberta)
 
-mostrar(total)
+let nome = prompt("Qual  é o seu nome?: ")
+let  alturaIformado = prompt("Informe a sua altura")
+let pesoInformado = prompt("Informe o seu  Peso")
+let resp = calcularImc(pesoInformado, alturaIformado)
+
+
+document.write(nome + "O valor informado do seu imc   é " + resp)
 
