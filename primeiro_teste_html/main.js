@@ -9,18 +9,15 @@ function mostrar(frase){
    
 
 }
+let numeroPen =  Math.round(Math.random() *10)
+let chute = parseInt(prompt("digite oseu numero"))
 
-function calcularImc(peso, altura){
-    return peso / (altura*altura)
- 
-   
+if(chute == numeroPen){
+    mostrar("Acertou"+numeroPen)
 }
-
-let nome = prompt("Qual  é o seu nome?: ")
-let  alturaIformado = prompt("Informe a sua altura")
-let pesoInformado = prompt("Informe o seu  Peso")
-let resp = calcularImc(pesoInformado, alturaIformado)
-
-
-document.write(nome + "O valor informado do seu imc   é " + resp)
-
+if(chute > numeroPen){
+ mostrar("Grande demais"+numeroPen)
+}
+if(chute < numeroPen){
+    mostrar("pequeno demais"+numeroPen)
+}
