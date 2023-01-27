@@ -12,7 +12,7 @@ function mostrar(frase){
 let anoCopa   = 1930
 
 
-while(true){
+while(anoCopa <= 2016){
     alert('Teve coppa em'+ anoCopa)
 
     anoCopa = anoCopa + 4
