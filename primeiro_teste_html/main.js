@@ -9,15 +9,11 @@ function mostrar(frase){
    
 
 }
-let numeroPen =  Math.round(Math.random() *10)
-let chute = parseInt(prompt("digite oseu numero"))
+let anoCopa   = 1930
 
-if(chute == numeroPen){
-    mostrar("Acertou"+numeroPen)
-}
-if(chute > numeroPen){
- mostrar("Grande demais"+numeroPen)
-}
-if(chute < numeroPen){
-    mostrar("pequeno demais"+numeroPen)
+
+while(true){
+    alert('Teve coppa em'+ anoCopa)
+
+    anoCopa = anoCopa + 4
 }
