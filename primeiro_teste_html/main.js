@@ -9,11 +9,4 @@ function mostrar(frase){
    
 
 }
-let anoCopa   = 1930
-
-
-while(anoCopa <= 2016){
-    alert('Teve coppa em'+ anoCopa)
-
-    anoCopa = anoCopa + 4
-}
+let  numeropP  = Math.round(Math.random() * 10)
