@@ -1,25 +1,24 @@
-function pularLinha(){
-    document.write('<br>')
-    document.write('<br>')
-
-}
-function mostrar(frase){
-    document.write(frase)
-    pularLinha()
-   
-
-}
-let  numeropP  = Math.round(Math.random() * 10)
- let tentantivas = 1
-while(tentantivas <= 10){
-    let chute = parseInt(prompt('Digite seu chute:'))
-    if(chute == numeropP){
-        mostrar("Acertou!")
-        break
+let input = document.querySelector('input')
+let segredo = Math.round( Math.random()*10)
+let botao = document.querySelector('button')
+input.focus()
+console.log(segredo)
+function verifica(){
+    if(input.value == segredo){
+        alert('Se deu bem👍')
     }else{
-        mostrar("Você errou, onúmero pensado foi" + numeropP)
+        alert("Errou😢")
     }
+    input.value = ""
+    input.focus()
 
-tentantivas++
+
 }
-mostrar('Fim')
+botao.addEventListener('click',()=>{
+    verifica()
+})
+    
+
+
+
+
