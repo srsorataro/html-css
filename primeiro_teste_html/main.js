@@ -1,33 +1,74 @@
-let input = document.querySelector('input')
-let segredos = [10,5,4,12]
-let botao = document.querySelector('button')
-input.focus()
-console.log(segredos)
-function verifica(){
-    achou = true
-    for(let co  = 0; co < segredos.length; co ++){
-        
-        if(input.value == segredos[co]){
-            alert('Se deu bem👍')
-            achou = true
-            break
-        }
-        if(achou == false){
-            alert("Errou😢")
-        }
+
+    function sorteia() {
+
+       return Math.round(Math.random() * 10);
 
     }
- 
-    input.value = ""
-    input.focus()
 
+    function sorteiaNumeros(quantidade) {
 
-}
-botao.addEventListener('click',()=>{
-    verifica()
-})
-    
+        var segredos = [];
 
+        var numero = 1;
 
+        while(numero <= quantidade) {
 
+              var numeroAleatorio = sorteia();
+              var achou = false;
 
+              if (numeroAleatorio !== 0) {
+                     for(var posicao = 0; posicao < segredos.length; posicao++) {
+
+                           if(segredos[posicao] == numeroAleatorio){
+                                achou = true;
+                                break;
+                           }
+
+                     }
+
+                     if (achou == false) {
+                           segredos.push(numeroAleatorio);
+                           numero++;
+                     }
+              }
+
+        }
+
+        return segredos;
+
+    }
+
+    var segredos = sorteiaNumeros(3);
+
+    console.log(segredos);
+
+    var input = document.querySelector("input");
+    input.focus();
+
+    function verifica() {
+
+       var achou = false;
+
+       for(var posicao = 0; posicao < segredos.length; posicao++) {
+
+              if(input.value == segredos[posicao]) {
+
+                     alert("Você ACERTOU!");
+                     achou = true;
+                     break;
+              } 
+       }
+
+       if(achou == false) {
+
+              alert("Você ERROU!");
+       }
+
+       input.value = "";
+       input.focus();
+
+    }
+
+    var button = document.querySelector("button");
+
+    button.onclick = verifica;
