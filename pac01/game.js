@@ -10,9 +10,17 @@ let createRect = (x, y, width, height, color) => {
 let fps = 30
 let oneBlockSize = 22
 let wallColor ="#342DCA"
-let wallSpaceWidth = oneBlockSize / 1.3
-let wallOffset = (oneBlockSize - wallSpaceWidth) / 4
+let wallSpaceWidth = oneBlockSize / 1.5
+let wallOffset = (oneBlockSize - wallSpaceWidth) / 2
 let wallInnerColor = "black"
+
+const DIRECTION_RIGHT = 4
+const DIRECTION_LEFT = 3
+const DIRECTION_UP = 2
+const DIRECTION_BOTTOM = 1
+
+
+let pacman;
 let map = [
          [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
          [1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1],
@@ -47,11 +55,13 @@ let gameLoop = () =>{
 
 }
 let update =  () =>{
+    //pacman.moveProcess()
 
 }
 let draw =  () =>{
     createRect(0,0, canvas.width,canvas.height,"black")
     drawWalls()
+    pacman.draw()
     
 }
 let gameInterval = setInterval(gameLoop, 1000/fps)
@@ -70,7 +80,7 @@ let drawWalls =  () =>{
             }
             if(j > 0  && map[i  ][j-1] == 1){
                 createRect(
-                    j * oneBlockSize +  wallOffset, 
+                    j * oneBlockSize,
                     i * oneBlockSize + wallOffset, wallSpaceWidth + wallOffset, wallSpaceWidth, wallInnerColor)
 
             }
@@ -91,10 +101,11 @@ let drawWalls =  () =>{
                     wallInnerColor)
 
             }
-            if(i < map.length -1 && map[i+ 1][j] == 1){
+            if(i < map.length - 1 && map[i + 1][j] == 1){
                 createRect(
                     j * oneBlockSize + wallOffset,
-                    i * oneBlockSize + wallOffset, wallSpaceWidth + wallOffset, wallSpaceWidth, wallInnerColor)
+                    i * oneBlockSize + wallOffset, wallSpaceWidth,
+                    wallSpaceWidth+ wallOffset, wallInnerColor)
                 
 
 
@@ -106,3 +117,13 @@ let drawWalls =  () =>{
     }
 
 }
+ let createNewPacman = () =>{
+    pacman = new Pacman()
+    oneBlockSize,
+    oneBlockSize,
+    oneBlockSize,
+    oneBlockSize,
+    oneBlockSize/5
+}
+createNewPacman()
+gameLoop()
