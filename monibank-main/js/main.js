@@ -1,11 +1,12 @@
-const campoDoFormulario = document.querySelectorAll("[required]")
+import ehUmCPF from "./valida_cpf.js"
+const camposDoFormulario = document.querySelectorAll('[required]')
 
-campoDoFormulario.forEach((campo) =>{
-    campo.addEventListener('blur', () => verificacaoCampo(campo))
-
-    
-
+camposDoFormulario.forEach((campo) => {
+    campo.addEventListener("blur", () => verificaCampo(campo));
 })
-function verificacaoCampo(campo){
 
+function verificaCampo(campo) {
+    if (campo.name == "cpf" && campo.value.length >= 11) {
+        ehUmCPF(campo);
+    }
 }
