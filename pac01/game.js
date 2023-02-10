@@ -7,12 +7,7 @@ let createRect = (x, y, width, height, color) => {
     canvasContext.fillStyle = color;
     canvasContext.fillRect(x, y, width, height);
 };
-let fps = 30
-let oneBlockSize = 22
-let wallColor ="#342DCA"
-let wallSpaceWidth = oneBlockSize / 1.5
-let wallOffset = (oneBlockSize - wallSpaceWidth) / 2
-let wallInnerColor = "black"
+
 
 const DIRECTION_RIGHT = 4
 const DIRECTION_LEFT = 3
@@ -20,7 +15,16 @@ const DIRECTION_UP = 2
 const DIRECTION_BOTTOM = 1
 
 
+//game variaveis
+let fps = 30
 let pacman;
+let oneBlockSize = 20
+let wallColor ="#342DCA"
+let wallSpaceWidth = oneBlockSize / 1.6
+let wallOffset = (oneBlockSize - wallSpaceWidth) / 2
+let wallInnerColor = "black"
+
+
 let map = [
          [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
          [1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1],
@@ -47,7 +51,7 @@ let map = [
          [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
 ];
 
- 
+
 let gameLoop = () =>{
     update()
     draw() 
@@ -55,8 +59,8 @@ let gameLoop = () =>{
 
 }
 let update =  () =>{
-    //pacman.moveProcess()
-
+   // pacman.moveProcess()
+    
 }
 let draw =  () =>{
     createRect(0,0, canvas.width,canvas.height,"black")
@@ -117,13 +121,16 @@ let drawWalls =  () =>{
     }
 
 }
- let createNewPacman = () =>{
-    pacman = new Pacman()
-    oneBlockSize,
-    oneBlockSize,
-    oneBlockSize,
-    oneBlockSize,
-    oneBlockSize/5
+let createNewPacman = () =>{
+    pacman = new Pacman(
+        oneBlockSize,
+        oneBlockSize,
+        oneBlockSize,
+        oneBlockSize,
+        oneBlockSize/5
+
+    )
+
 }
 createNewPacman()
 gameLoop()
