@@ -23,6 +23,8 @@ let wallColor ="#342DCA"
 let wallSpaceWidth = oneBlockSize / 1.6
 let wallOffset = (oneBlockSize - wallSpaceWidth) / 2
 let wallInnerColor = "black"
+foodColor = "#FEB897"
+let score = 0;
 
 
 let map = [
@@ -58,14 +60,34 @@ let gameLoop = () =>{
 
 
 }
+let drawFoods = () => {
+     for (let i = 0; i < map.length; i++) {
+        for (let j = 0; j < map[0].length; j++){
+            if(map[i][j] == 2){
+                createRect(
+                    j * oneBlockSize + oneBlockSize / 3,
+                    i * oneBlockSize + oneBlockSize / 3,
+                oneBlockSize / 3,
+                oneBlockSize / 3,
+                foodColor
+                )
+            }
+          
+        }
+        
+         }
+}
+
 let update =  () =>{
-    pacman.moveProcess()
+   pacman.moveProcess()
+   pacman.eat()
     
 }
 let draw =  () =>{
     canvasContext.clearRect(0,0,canvas.width,canvas.height)
     createRect(0,0, canvas.width,canvas.height,"black")
     drawWalls()
+    drawFoods()
     pacman.draw()
     
 }
