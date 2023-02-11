@@ -7,6 +7,7 @@ class Pacman{
         this.height = height
         this.speed = speed 
         this.direction = DIRECTION_RIGHT
+        this.nextDirection = this.direction;
         this.currentFrame  = 1
         this.frameCount = 7
         setInterval(() =>{
@@ -14,8 +15,10 @@ class Pacman{
         },100)
 
     }
+   
     moveProcess(){
-        this.changeDirectionIfPossible();
+        this.changeDirectionIfPossible()
+      
         this.moveForwards();
         if(this.checkCollision()){
            this.moveBackwards();
@@ -24,10 +27,9 @@ class Pacman{
         }
     }
     eat(){}
-    moveBackwards(){}
-    moveForwards(){
+    moveBackwards(){
         switch(this.direction){
-            case DIRECTION_RIGHT:
+            case  DIRECTION_RIGHT:
                 this.x -= this.speed
                 break
         }
@@ -47,12 +49,35 @@ class Pacman{
                 break
         }
     }
+    moveForwards(){
+        switch(this.direction){
+            case  DIRECTION_RIGHT:
+                this.x += this.speed
+                break
+        }
+        switch(this.direction){
+            case DIRECTION_UP:
+                this.y -= this.speed
+                break
+        }
+        switch(this.direction){
+            case DIRECTION_LEFT:
+                this.x -= this.speed
+                break
+        }
+        switch(this.direction){
+            case DIRECTION_BOTTOM:
+                this.y += this.speed
+                break
+        }
+    }
     checkCollision(){
         let isCollided = false
-        if(map[this.getMapY()][this.getMapX()] == 1  
+        if(
+           map[this.getMapY()][this.getMapX()] == 1  
         || map[this.getMapYRightSide()][this.getMapX()] == 1
         || map[this.getMapY()][this.getMapXRightSide()] == 1
-        || map[this.getMapYRightSide()][this.getMapXRightSide()]==1)
+        || map[this.getMapYRightSide()][this.getMapXRightSide()]== 1)
         {
             return true
 
@@ -61,24 +86,33 @@ class Pacman{
     }
     checkGhostCollision(){}
     changeDirection(){}
-    changeDirectionIfPossible(){}
+    changeDirectionIfPossible(){
+        if(this.direction == this.nextDirection)return
+        let temDirection = this.direction
+        this.direction = this.nextDirection
+        this.moveForwards()
+        if(this.checkCollision()){
+            this.moveBackwards()
+        }
+    
+    }
     changeAnimation(){
-        this.currentFrame = this.currentFrame == this.frameCount ? 1: this.currentFrame + 1     
+        this.currentFrame = this.currentFrame == this.frameCount ? 1: this.currentFrame + 1    
     }
     draw(){
         canvasContext.save()
         canvasContext.translate(
-            this.x  + oneBlockSize/2,
+            this.x  + oneBlockSize/ 2,
             this.y + oneBlockSize / 2
             ) 
-            canvasContext.rotate((this.direction * 90*Math.PI)/180)
+            canvasContext.rotate((this.direction * 90 * Math.PI)/180)
 
             canvasContext.translate(
-                -this.x  - oneBlockSize/2,
+                -this.x  - oneBlockSize / 2,
                 -this.y - oneBlockSize / 2
                 ) 
                 canvasContext.drawImage(
-                    pacmanFrames,(this.currentFrame - 1) /oneBlockSize,
+                    pacmanFrames,(this.currentFrame - 1) * oneBlockSize,
                     0,
                     oneBlockSize,
                     oneBlockSize,
@@ -102,6 +136,6 @@ class Pacman{
         return parseInt((this.x + 0.9999 * oneBlockSize)/ oneBlockSize)
      } 
      getMapYRightSide(){
-        return parseInt((this.x  + 0.9999 * oneBlockSize)/ oneBlockSize)
+        return parseInt((this.y  + 0.9999 * oneBlockSize)/ oneBlockSize)
      } 
 }
