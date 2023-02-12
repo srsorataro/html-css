@@ -14,6 +14,12 @@ const DIRECTION_LEFT = 3
 const DIRECTION_UP = 2
 const DIRECTION_BOTTOM = 1
 
+let ghostLocations = [
+    {x:0, y:0},
+    {x:176, y:0},
+    {x:0, y:121},
+    {x:176, y:121},
+]
 
 //game variaveis
 let fps = 30
@@ -25,6 +31,9 @@ let wallOffset = (oneBlockSize - wallSpaceWidth) / 2
 let wallInnerColor = "black"
 foodColor = "#FEB897"
 let score = 0;
+let ghosts =[]
+let ghostCount = 4
+
 
 
 let map = [
@@ -38,7 +47,7 @@ let map = [
          [1, 1, 1, 1, 1, 2, 1, 1, 1, 2, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1, 1],
          [0, 0, 0, 0, 1, 2, 1, 2, 2, 2, 2, 2, 2, 2, 1, 2, 1, 0, 0, 0, 0],
          [1, 1, 1, 1, 1, 2, 1, 2, 1, 1, 2, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1],
-         [2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2],  
+         [1, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 1],  
          [1, 1, 1, 1, 1, 2, 1, 2, 1, 2, 2, 2, 1, 2, 1, 2, 1, 1, 1, 1, 1],
          [0, 0, 0, 0, 1, 2, 1, 2, 1, 1, 1, 1, 1, 2, 1, 2, 1, 0, 0, 0, 0],
          [0, 0, 0, 0, 1, 2, 1, 2, 2, 2, 2, 2, 2, 2, 1, 2, 1, 0, 0, 0, 0],
@@ -83,13 +92,27 @@ let update =  () =>{
    pacman.eat()
     
 }
+let drawGhost = () =>
+{
+    for(let i = 0; i < ghosts.length; i++ ){
+        ghosts[i].draw()
+    }
+}
 let draw =  () =>{
     canvasContext.clearRect(0,0,canvas.width,canvas.height)
     createRect(0,0, canvas.width,canvas.height,"black")
     drawWalls()
     drawFoods()
     pacman.draw()
+    drawScore()
+    drawGhost()
     
+}
+let drawScore = () =>{
+    canvasContext.font = "20px Emulogic"
+    canvasContext.fillStyle = "white"
+    canvasContext.fillText("Score:" + score,0, oneBlockSize* (map.length + 1)+ 10
+    )
 }
 let gameInterval = setInterval(gameLoop, 1000/fps)
 
@@ -155,8 +178,31 @@ let createNewPacman = () => {
     );
 };
 
+
+let createGhosts = () =>{
+    ghosts = []
+
+    for(let i  = 0; i < ghostCount; i++){
+        let newGhost = new Ghost(
+            9 * oneBlockSize + (i %2 == 0 ? 0 : 1) * oneBlockSize,
+            10 * oneBlockSize + (i %2 == 0 ? 0 : 1) * oneBlockSize,
+            oneBlockSize,
+            oneBlockSize,
+            pacman.speed/2,
+            ghostLocations[1% 4].x,
+            ghostLocations[1% 4].y,
+            124,126,6+ i
+            
+                    )
+
+                    ghosts.push(newGhost)
+
+    }
+
+}
 createNewPacman()
 gameLoop()
+createGhosts()
 window.addEventListener("keydown", (event)=>{
 
     let k  = event.keyCode
