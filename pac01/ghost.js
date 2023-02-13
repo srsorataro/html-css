@@ -40,19 +40,7 @@ class Ghost{
            
         }
     }
-    eat(){
-        for(let i = 0;  i< map.length; i++){
-            for(let j = 0; j < map[0].length; j++){
-                if(map[i][j] == 2  &&
-                    this.getMapX() == j &&
-                    this.getMapY() == i){
-                        map[i][j] = 3
-                        score++;
-                    }
-            }
-        }
-
-    }
+ 
     moveBackwards(){
         switch(this.direction){
             case  DIRECTION_RIGHT:
@@ -110,16 +98,27 @@ class Ghost{
         }
         return false
     }
+    insInOfPacman(){
+        
+    }
     checkGhostCollision(){}
     changeDirection(){}
+
+
+
     changeDirectionIfPossible(){
-        if(this.direction == this.nextDirection)return
-        let temDirection = this.direction
-        this.direction = this.nextDirection
+       let  tempDirection = this.direction
+
+       this.direction = this.calculateNewDirection(
+
+        map,
+        parseInt(this.this.target.x / oneBlockSize ),
+        parseInt(this.target.y / oneBlockSize)
+       )
         this.moveForwards()
         if(this.checkCollision()){
             this.moveBackwards()
-            this.direction = temDirection
+            this.direction = tempDirection
         }else{
             this.moveBackwards()
         }
@@ -159,4 +158,10 @@ class Ghost{
      getMapYRightSide(){
         return parseInt((this.y  + 0.9999 * oneBlockSize)/ oneBlockSize)
      } 
+}
+let drawGhost = () =>
+{
+    for(let i = 0; i < ghosts.length; i++ ){
+        ghosts[i].draw()
+    }
 }

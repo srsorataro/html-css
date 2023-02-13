@@ -69,6 +69,9 @@ let gameLoop = () =>{
 
 
 }
+
+let gameInterval = setInterval(gameLoop, 1000/fps)
+
 let drawFoods = () => {
      for (let i = 0; i < map.length; i++) {
         for (let j = 0; j < map[0].length; j++){
@@ -92,12 +95,7 @@ let update =  () =>{
    pacman.eat()
     
 }
-let drawGhost = () =>
-{
-    for(let i = 0; i < ghosts.length; i++ ){
-        ghosts[i].draw()
-    }
-}
+
 let draw =  () =>{
     canvasContext.clearRect(0,0,canvas.width,canvas.height)
     createRect(0,0, canvas.width,canvas.height,"black")
@@ -114,7 +112,7 @@ let drawScore = () =>{
     canvasContext.fillText("Score:" + score,0, oneBlockSize* (map.length + 1)+ 10
     )
 }
-let gameInterval = setInterval(gameLoop, 1000/fps)
+
 
 let drawWalls =  () =>{
     for(let i = 0; i < map.length; i++){
@@ -181,17 +179,18 @@ let createNewPacman = () => {
 
 let createGhosts = () =>{
     ghosts = []
-
-    for(let i  = 0; i < ghostCount; i++){
+    for(let i  = 0; i < ghostCount ; i++){
         let newGhost = new Ghost(
-            9 * oneBlockSize + (i %2 == 0 ? 0 : 1) * oneBlockSize,
-            10 * oneBlockSize + (i %2 == 0 ? 0 : 1) * oneBlockSize,
+            9 * oneBlockSize + (i % 2 == 0 ? 0 : 1) * oneBlockSize,
+            10 * oneBlockSize + (i % 2 == 0 ? 0 : 1) * oneBlockSize,
             oneBlockSize,
             oneBlockSize,
             pacman.speed/2,
-            ghostLocations[1% 4].x,
-            ghostLocations[1% 4].y,
-            124,126,6+ i
+            ghostLocations[1  % 4].x,
+            ghostLocations[1 % 4].y,
+            124,
+            126,
+            6 + i
             
                     )
 
@@ -201,8 +200,9 @@ let createGhosts = () =>{
 
 }
 createNewPacman()
-gameLoop()
 createGhosts()
+gameLoop()
+
 window.addEventListener("keydown", (event)=>{
 
     let k  = event.keyCode
