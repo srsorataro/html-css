@@ -1,4 +1,4 @@
-import ehUmCPF from "../js/valida_cpf"
+import ehUmCPF from "./valida_cpf.js";
 const camposDoFormulario = document.querySelectorAll('[required]')
 
 camposDoFormulario.forEach((campo) => {
