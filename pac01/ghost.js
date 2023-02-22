@@ -3,7 +3,8 @@
 class Ghost{
     constructor(
         x,
-        y,width,
+        y,
+        width,
         height,
         speed,
         imageX,

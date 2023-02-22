@@ -15,8 +15,8 @@ const DIRECTION_UP = 2
 const DIRECTION_BOTTOM = 1
 
 let ghostLocations = [
-    {x:0, y:0},
     {x:176, y:0},
+    {x:0, y:0},
     {x:0, y:121},
     {x:176, y:121},
 ]
@@ -34,7 +34,11 @@ let score = 0;
 let ghosts =[]
 let ghostCount = 4
 
-
+// we now create the map of the walls,
+// if 1 wall, if 0 not wall
+// 21 columns // 23 rows// we now create the map of the walls,
+// if 1 wall, if 0 not wall
+// 21 columns // 23 rows
 
 let map = [
          [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
@@ -178,15 +182,15 @@ let createNewPacman = () => {
 
 
 let createGhosts = () =>{
-    ghosts = []
-    for(let i  = 0; i < ghostCount ; i++){
+    ghosts = [];
+    for(let i  = 0; i < ghostCount; i++){
         let newGhost = new Ghost(
             9 * oneBlockSize + (i % 2 == 0 ? 0 : 1) * oneBlockSize,
             10 * oneBlockSize + (i % 2 == 0 ? 0 : 1) * oneBlockSize,
             oneBlockSize,
             oneBlockSize,
-            pacman.speed/2,
-            ghostLocations[1  % 4].x,
+            pacman.speed/ 2,
+            ghostLocations[1 % 4].x,
             ghostLocations[1 % 4].y,
             124,
             126,
@@ -209,19 +213,19 @@ window.addEventListener("keydown", (event)=>{
     setTimeout( () =>{
         if(k == 37 || k == 65){
             //left
-            pacman.nextDirection = DIRECTION_LEFT
+            pacman.nextDirection = DIRECTION_LEFT;
 
         }else if( k == 38 || k == 87){ 
             //up
-            pacman.nextDirection = DIRECTION_UP
+            pacman.nextDirection = DIRECTION_UP;
 
         } else if(k == 39 || k == 68){
             //right
-            pacman.nextDirection = DIRECTION_RIGHT
+            pacman.nextDirection = DIRECTION_RIGHT;
 
         }else if(k == 40 || k == 83){
             //bottom
-            pacman.nextDirection = DIRECTION_BOTTOM
+            pacman.nextDirection = DIRECTION_BOTTOM;
 
         }
 
