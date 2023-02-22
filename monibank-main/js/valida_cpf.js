@@ -2,6 +2,7 @@ export default function ehUmCPF(campo) {
     const cpf = campo.value.replace(/\.|-/g, "");
     validaNumerosRepitidos(cpf)
     console.log(validaNumerosRepitidos(cpf))
+    validaPrimeiroDigito(cpf)
 }
 
 function validaNumerosRepitidos(cpf){
@@ -27,8 +28,11 @@ function validaPrimeiroDigito(cpf){
         soma += cpf[tamanho] * multiplicador;
         multiplicador--;
     }
-    soma =(soma) * 10 % 11}
+    soma =(soma * 10)  % 11
     if(soma == 10 || soma  == 11){
         soma = 0
     }
-    return soma != cpf[]
+    return soma != cpf[9]
+}
+ 
+  
