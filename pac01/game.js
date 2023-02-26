@@ -14,12 +14,6 @@ const DIRECTION_LEFT = 3
 const DIRECTION_UP = 2
 const DIRECTION_BOTTOM = 1
 
-let ghostLocations = [
-    {x:176, y:0},
-    {x:0, y:0},
-    {x:0, y:121},
-    {x:176, y:121},
-]
 
 //game variaveis
 let fps = 30
@@ -31,8 +25,15 @@ let wallOffset = (oneBlockSize - wallSpaceWidth) / 2
 let wallInnerColor = "black"
 foodColor = "#FEB897"
 let score = 0;
-let ghosts =[]
+let ghosts = []
 let ghostCount = 4
+
+let ghostLocations = [
+    {x:0, y:0},
+    {x:176, y:0},
+    {x:0, y:121},
+    {x:176, y:121},
+]
 
 // we now create the map of the walls,
 // if 1 wall, if 0 not wall
@@ -182,21 +183,22 @@ let createNewPacman = () => {
 
 
 let createGhosts = () =>{
-    ghosts = [];
+    ghosts=[]
     for(let i  = 0; i < ghostCount; i++){
         let newGhost = new Ghost(
             9 * oneBlockSize + (i % 2 == 0 ? 0 : 1) * oneBlockSize,
             10 * oneBlockSize + (i % 2 == 0 ? 0 : 1) * oneBlockSize,
             oneBlockSize,
             oneBlockSize,
-            pacman.speed/ 2,
-            ghostLocations[1 % 4].x,
-            ghostLocations[1 % 4].y,
+            pacman.speed / 2,
+            ghostLocations[ i % 4].x,
+            ghostLocations[ i % 4].y,
             124,
             126,
             6 + i
             
                     )
+                   
 
                     ghosts.push(newGhost)
 

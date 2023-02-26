@@ -8,8 +8,9 @@ class Pacman{
         this.speed = speed 
         this.direction = DIRECTION_RIGHT
         this.nextDirection = this.direction;
-        this.currentFrame  = 1
         this.frameCount = 7
+        this.currentFrame  = 1
+       
         setInterval(() =>{
             this.changeAnimation()
         },100)
@@ -18,10 +19,10 @@ class Pacman{
    
     moveProcess(){
         this.changeDirectionIfPossible()
-      
         this.moveForwards();
         if(this.checkCollision()){
            this.moveBackwards();
+           return
  
            
         }
@@ -42,44 +43,44 @@ class Pacman{
     moveBackwards(){
         switch(this.direction){
             case  DIRECTION_RIGHT:
-                this.x -= this.speed
+                this.x -= this.speed//direita
                 break
         }
         switch(this.direction){
             case DIRECTION_UP:
-                this.y += this.speed
+                this.y += this.speed//cima
                 break
         }
         switch(this.direction){
             case DIRECTION_LEFT:
-                this.x += this.speed
+                this.x += this.speed//esquerda
                 break
         }
         switch(this.direction){
             case DIRECTION_BOTTOM:
-                this.y -= this.speed
+                this.y -= this.speed//baixo
                 break
         }
     }
     moveForwards(){
         switch(this.direction){
             case  DIRECTION_RIGHT:
-                this.x += this.speed
+                this.x += this.speed//direita
                 break
         }
         switch(this.direction){
             case DIRECTION_UP:
-                this.y -= this.speed
+                this.y -= this.speed//cima
                 break
         }
         switch(this.direction){
             case DIRECTION_LEFT:
-                this.x -= this.speed
+                this.x -= this.speed//esquerda
                 break
         }
         switch(this.direction){
             case DIRECTION_BOTTOM:
-                this.y += this.speed
+                this.y += this.speed//baixo
                 break
         }
     }
@@ -91,10 +92,10 @@ class Pacman{
         || map[this.getMapY()][this.getMapXRightSide()] == 1
         || map[this.getMapYRightSide()][this.getMapXRightSide()]== 1)
         {
-            return true
+            isCollided =  true
 
         }
-        return false
+        return isCollided
     }
     checkGhostCollision(){}
     changeDirection(){}

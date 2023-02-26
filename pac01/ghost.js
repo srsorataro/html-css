@@ -32,6 +32,10 @@ class Ghost{
     }
    
     moveProcess(){
+        if(this.isInRangeOfPacman){
+            target = pacman
+            
+        }
         this.changeDirectionIfPossible()
       
         this.moveForwards();
@@ -105,7 +109,18 @@ class Ghost{
     checkGhostCollision(){}
     changeDirection(){}
 
+    isInRangeOfPacman()  {
+        let xDistance  = Math.abs(pacman.getMapX() - this.getMapX())
+        let yDistance  = Math.abs(pacman.getMapy() - this.getMapy())
+        if( Math.sqrt(xDistance * this.x + yDistance
+            * yDistance <= range)){
+                return true
+            }
+            return false
+        
+        
 
+   }
 
     changeDirectionIfPossible(){
        let  tempDirection = this.direction
