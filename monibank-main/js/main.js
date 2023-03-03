@@ -17,9 +17,27 @@ const tiposDeErros = [
 ]
 const mensagens = {
     nome:{
-        valueMissing:'Esse campo escrito  não é valido.image.png😢',
-        typeMismatch: 'Esse tipo  não  é valido😥 ',
-        tooShort:'Esse não e o que  o esperado.😰'
+        valueMissing:'Esse campo escrito  de nome  não pode está vazio .image.png😢',
+        typeMismatch: 'Esse tipo  de nome deve ser preencido valido😥 ',
+        tooShort:'Esse não e o que  o esperado, coloque um valido.😰'
+
+    }, 
+    email:{
+        valueMissing:'Esse campo  de email escrito  não pode stá vazio.image.png😢',
+        typeMismatch: 'Esse tipo  email não  é valido preenche o campo😥 ',
+        tooShort:'Esse não e o que  o esperado,coloque um email .😰'
+
+    }, 
+    rg:{
+        valueMissing:'Esse campo escrito   não é valido, escreva um rg valido.image.png😢',
+        typeMismatch: 'preeencha um rg valido😥 ',
+        tooShort:'Esse não e o que  o esperado, coloque um rg valido.😰'
+
+    }, 
+    cpf:{
+        valueMissing:'Esse campo  de cpf escrito  não pode está vazio.image.png😢',
+        typeMismatch: 'Esse tipo  não  é valido, coloque um cpf valido😥 ',
+        tooShort:'Esse não e o que  o esperado,peeencha um cpf valido.😰'
 
     }, 
 }
