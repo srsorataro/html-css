@@ -40,13 +40,35 @@ const mensagens = {
         tooShort:'Esse não e o que  o esperado,peeencha um cpf valido.😰'
 
     }, 
+    aniversario:{
+        valueMissing:'Esse campo  de aniversario escrito  não pode está vazio.image.png😢',
+        typeMismatch: 'Esse tipo  não  é valido, coloque um aniversario valido😥 ',
+        tooShort:'Esse não e o que  o esperado,peeencha um aniversario valido.😰'
+
+    }, 
 }
 function verificaCampo(campo) {
+    let mensagem =''
     if (campo.name == "cpf" && campo.value.length >= 11) {
         ehUmCPF(campo);
     }
     if(campo.name ==  "aniversario" && campo.value != ""){
         ehMaiorDeIdade(campo)
     }
-    console.log(campo.validity)
+    tiposDeErros.forEach(erro =>{
+        if(campo.validity[erro]){
+            mensagem = mensagens[campo.name][erro]
+        }
+        
+    })
+const mensagemErro = campo.parentNode.querySelector('.mensagem-erro')
+const validttyImput = campo.checkValidity()
+if(!validttyImput){
+    mensagemErro.textContent = mensagem
+
+
+  
+}else{
+    mensagemErro.textContent = ''
+}
 }
