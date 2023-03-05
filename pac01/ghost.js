@@ -28,6 +28,12 @@ class Ghost{
         this.imageWidth = imageWidth
         this.imageHeight = imageHeight
         this.range = range
+        this.randomTargetIndex = parseInt(Math.random() * this.randomTargetsForGhosts.length)
+        
+        setInterval(() => {
+            this.changeRandomDirection()
+            
+        },10000);
 
     }
    
@@ -35,6 +41,8 @@ class Ghost{
         if(this.isInRangeOfPacman){
             target = pacman
             
+        }else{
+            this.target = randomTargetsForGhosts[this.randomTargetIndex]
         }
         this.changeDirectionIfPossible()
       
@@ -106,8 +114,7 @@ class Ghost{
     insInOfPacman(){
         
     }
-    checkGhostCollision(){}
-    changeDirection(){}
+
 
     isInRangeOfPacman()  {
         let xDistance  = Math.abs(pacman.getMapX() - this.getMapX())
