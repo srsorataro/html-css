@@ -33,8 +33,6 @@ const DIRECTION_BOTTOM = 1
 
 
 
-
-
 let ghostLocations = [
     {x:0, y:0},
     {x:176, y:0},
@@ -74,13 +72,17 @@ let map = [
          [1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1],          
          [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
 ];
+
 let  randomTargetsForGhosts = [
-    {x:1*oneBlockSize,y:1 * oneBlockSize},
-    {x:1*oneBlockSize,y:(map.length - 2)* oneBlockSize},
-    {x:(map[0].length-2)*oneBlockSize,y:oneBlockSize},
-    {x:(map[0].length-2)*oneBlockSize,y:(map.length -2)* oneBlockSize},
-    
-]
+    { x: 1 * oneBlockSize, y: 1 * oneBlockSize },
+    { x: 1 * oneBlockSize, y: (map.length - 2) * oneBlockSize },
+    { x: (map[0].length - 2) * oneBlockSize, y: oneBlockSize },
+    {
+        x: (map[0].length - 2) * oneBlockSize,
+        y: (map.length - 2) * oneBlockSize,
+    },
+];
+
 
 
 let gameLoop = () =>{

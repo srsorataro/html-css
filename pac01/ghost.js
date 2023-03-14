@@ -28,7 +28,8 @@ class Ghost{
         this.imageWidth = imageWidth
         this.imageHeight = imageHeight
         this.range = range
-        this.randomTargetIndex = parseInt(Math.random() * this.randomTargetsForGhosts.length)
+        this.randomTargetIndex = parseInt(Math.random() * this.randomTargetsForGhosts)
+        this.target = randomTargetsForGhosts[this.randomTargetIndex]
         
         setInterval(() => {
             this.changeRandomDirection()
@@ -36,7 +37,9 @@ class Ghost{
         },10000);
 
     }
-   
+    changeRandomDirection(){
+        this.randomTargetIndex += 1, this.randomTargetIndex  % 4
+    }
     moveProcess(){
         if(this.isInRangeOfPacman){
             target = pacman
@@ -52,6 +55,61 @@ class Ghost{
  
            
         }
+    }
+    calculateNewDirection(map,destX,destY){
+        let mp = []
+        for(let i  = 0; i < map.length; i++){
+            mp[i] = map[i].slice()
+
+
+        }
+        let queue =[{
+            x:this.getMapX(),
+            y:this.getMapY(),
+            moves: [],
+        }
+        ]
+        while(queue.length > 0){
+            let poped = queue.shift()
+            if(poped.x == destX && poped.y == destY){
+
+                return poped.moves[0]
+            }else{
+                mp[poped.y][poped.x] = 1
+                let neighborList = this.addNeighbors(poped,mp)
+            }
+        }
+    }
+    addNeighbors(poped,mp){
+        let queue = []
+        let numOfRows = mp.length
+        let numOfColumns = mp[0].length
+        
+        if(poped.x  +1 >= 0 && 
+            poped.x +1 < numOfRows &&
+            mp[poped.y][poped.x   - 1 != 1]){
+                let tempMoves = poped.moves.slice()
+                tempMoves.push(DIRECTION_LEFT)
+                queue.push({x: poped.x - 1, y: poped.y,moves:temMoves})
+
+                
+            }
+            if(poped.x  -1 >= 0 && 
+                poped.x -1 < numOfRows &&
+                mp[poped.y][poped.x   - 1 != 1]){
+                    let tempMoves = poped.moves.slice()
+                    tempMoves.push(DIRECTION_LEFT)
+                    queue.push({x: poped.x - 1, y: poped.y,moves:temMoves})
+    
+                }
+                if(poped.x  -1 >= 0 && 
+                    poped.x -1 < numOfRows &&
+                    mp[poped.y][poped.x   - 1 != 1]){
+                        let tempMoves = poped.moves.slice()
+                        tempMoves.push(DIRECTION_LEFT)
+                        queue.push({x: poped.x - 1, y: poped.y,moves:temMoves})
+        
+                    }
     }
  
     moveBackwards(){
@@ -119,8 +177,7 @@ class Ghost{
     isInRangeOfPacman()  {
         let xDistance  = Math.abs(pacman.getMapX() - this.getMapX())
         let yDistance  = Math.abs(pacman.getMapy() - this.getMapy())
-        if( Math.sqrt(xDistance * this.x + yDistance
-            * yDistance <= range)){
+        if( Math.sqrt(xDistance * xDistance + yDistance *yDistance) <=  this.range){
                 return true
             }
             return false
