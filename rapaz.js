@@ -1,5 +1,5 @@
-const  meuNumero = 3
-const nim1 = 1
-const nim2 = 2
-const  op = nim1 % nim2
-console.log(op)
+const texto1 = "Olá, mundo!"
+const texto2 = " Olá"
+const senha = "125ssss"
+
+console.log(texto1+texto2+senha)
