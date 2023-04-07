@@ -1,3 +1,6 @@
-const nota1 = [10,6.5,8,7.5]
-const media = (nota1[0],nota1[1],nota1[2],nota1[3])
-console.log(nota1[1])
+const alunos  = ["João", "Juliana", "Ana", "Caio"]
+const medias =[10, 8, 7.5, 9]
+const  listaDeAlunosEMedias = [alunos,medias]
+for(let i = 0; i < alunos.length; i++){
+   console.log(alunos[i],medias[i])
+}
