@@ -1,5 +1,8 @@
-const  nun = [12,14,54,78,445]
-const n = nun / 5
-for(let i = 0;  i < n.length; i++){
-   console.log(n[i])
-}
+const notas = [10, 9.5, 8, 7, 6];
+
+ const notasA = notas.map((nota) =>{
+   return  nota + 1 >= 10 ? 10 : nota + 1
+
+
+})
+console.log(notasA)
