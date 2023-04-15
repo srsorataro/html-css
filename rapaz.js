@@ -1,4 +1,7 @@
-const notas = [7, 7, 8, 9];
- const novasNotas = [...notas,15]
-
- console.log(novasNotas)
+const cliente = {
+nome:"andre",
+idade:32,
+cpf:"12234545678",
+email:"adre@ddd.com"
+}
+console.log(cliente.cpf.substring(0,3))
