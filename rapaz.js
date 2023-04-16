@@ -4,4 +4,4 @@ idade:32,
 cpf:"12234545678",
 email:"adre@ddd.com"
 }
-console.log(cliente["cpf"])
+console.log(cliente)
