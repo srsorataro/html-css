@@ -1,7 +1,5 @@
-const cliente = {
-nome:"andre",
-idade:32,
-cpf:"12234545678",
-email:"adre@ddd.com"
+const mulher = {
+    nome: "Luma",
+    profisssao:"engenheira",
 }
-console.log(cliente)
+console.log(mulher.nome)
