@@ -1,0 +1,13 @@
+{
+    "nome":"João",
+    "idade":24,
+    "email":"João@firma.com",
+    "telefone":[154521545456,87856465465465],
+    "saldo": 200,
+    "apartamento":true,
+    "complemento":"ap7821"
+
+}
+
+
+
