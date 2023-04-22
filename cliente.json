@@ -1,13 +1,32 @@
-{
-    "nome":"João",
-    "idade":24,
-    "email":"João@firma.com",
-    "telefone":[154521545456,87856465465465],
-    "saldo": 200,
-    "apartamento":true,
-    "complemento":"ap7821"
+[
+    {
+      "nome":"Olva",
+      "email":"olippini0@deviantart.com",
+      "telefone":[
+        "4733865848",
+        "47933865848"
+      ],
+      "endereco":{
+        "logradouro":"Rua Transport",
+        "numero":"05",
+        "cep":"46140",
+        "apartamento":true,
+        "complemento":"ap 102"
+      }
+    },
+    {
+      "nome":"Oralle",
+      "email":"orajchert1@clickbank.net",
+      "telefone":[
+        "5896279799",
+        "58996279799"
+      ],
+      "endereco":{
+        "logradouro":"Rua Kedzie",
+        "numero":"89",
+        "cep":"613840",
+        "apartamento":false
+      }
+    }
 
-}
-
-
-
+  ]
