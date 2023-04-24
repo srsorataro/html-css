@@ -1,4 +1,10 @@
-const numertosPares = [2,4,6]
-const numerosImpares = [1,3,5]
-const numeros = [...numertosPares,...numerosImpares]
-console.log(numeros)
+const muie  = {
+    nome:"ju",
+    idade:25
+}
+const  pessoaComTelefone = {
+    ...muie, 
+    telefone: 1226456
+}
+const{nome} = muie
+console.log(nome)
