@@ -1,10 +1,13 @@
-const muie  = {
-    nome:"ju",
-    idade:25
+const livro = require("./filtrar")
+
+ 
+let maisBarato = 0 
+for(let atual = 0; atual <  livro.length; atual++){
+  if(livro[atual].preco< livro[maisBarato].preco){
+    maisBarato = atual
+  
+  }
+
 }
-const  pessoaComTelefone = {
-    ...muie, 
-    telefone: 1226456
-}
-const{nome} = muie
-console.log(nome)
+console.log(livro[maisBarato].preco)
+
