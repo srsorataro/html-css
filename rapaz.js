@@ -1,13 +1,15 @@
 const livro = require("./filtrar")
-
+function menorValor(arrProdutos,posicaoInicial){
+ let maisBarato = posicaoInicial 
+ for(let atual = 0; atual <  arrProdutos.length; atual++){
+   if(arrProdutos[atual].preco< arrProdutos[maisBarato].preco){
+     maisBarato = atual
+   
+   }
  
-let maisBarato = 0 
-for(let atual = 0; atual <  livro.length; atual++){
-  if(livro[atual].preco< livro[maisBarato].preco){
-    maisBarato = atual
-  
-  }
+ }
+return maisBarato
 
-}
-console.log(livro[maisBarato].preco)
 
+} 
+module.exports = menorValor
