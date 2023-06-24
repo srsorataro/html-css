@@ -9,4 +9,12 @@ function mergeSort(array){
     }
     return array
 }
+function ordena(p1,p2){
+    let posicaoAltualP1 = 0
+    let posicaoAltualP2 = 0
+    const resultado = []
+    while (posicaoAltualP1 < p1.length &&  posicaoAltualP2 < p2.length)
+
+}
+
 console.log(mergeSort( livros))
