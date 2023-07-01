@@ -23,5 +23,15 @@ const livros = [
     titulo:"Minha nossa nossa nossa",
     preco:7
 },
+{
+    titulo:"Carai, tudo isso?",
+    preco:43
+},
+{
+    titulo:"Minha nossa nossa nossa",
+    preco:72
+},
+
+
 ]
 module.exports = livros
