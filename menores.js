@@ -20,4 +20,18 @@ function trocarDelugasr(array,de,para){
     array[para] = elem1 
     array[de] = elemt2
 }
-console.log(encontraMenores(lista[4], lista))
+function divideNoPivo(array){
+    let pivo = array[Math.floor( array.length / 2)]
+    encontraMenores(pivo,array)
+    let valoresMenores = 0
+    for(let i = 0; i < array.length; i++){
+        let atual = array[i]
+        if(atual.preco <= pivo.preco && atual !== pivo){
+            trocarDelugasr(array,i,valoresMenores )
+            valoresMenores++
+        }
+    }
+    return array
+   
+}
+console.log(divideNoPivo(lista))
