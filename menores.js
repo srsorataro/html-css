@@ -34,4 +34,4 @@ function divideNoPivo(array){
     return array
    
 }
-console.log(divideNoPivo(lista))
+module.exports = trocarDelugasr
